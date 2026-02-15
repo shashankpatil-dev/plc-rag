@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="33.00" TargetName="Mat_Roll_Transfer_Conveyor1_Project" TargetType="Controller" ContainsContext="false" ExportDate="Sat Feb 07 16:24:19 2026" ExportOptions="References NoRawData L5KData DecoratedData ForceProtectedEncoding AllProjDocTrans">
+  <Controller Use="Target" Name="Mat_Roll_Transfer_Conveyor1_Project" ProcessorType="1769-L18ER-BB1B" MajorRev="33" MinorRev="11" TimeSlice="20" ShareUnusedTimeSlice="1" ProjectCreationDate="Sat Feb 07 16:24:19 2026" LastModifiedDate="Sat Feb 07 16:24:19 2026" SFCExecutionControl="CurrentActive" SFCRestartPosition="MostRecent" SFCLastScan="DontScan" ProjectSN="16#0000_0000" MatchProjectToController="false" CanUseRPIFromProducer="false" InhibitAutomaticFirmwareUpdate="0">
+    <Tags>
+      <Tag Name="AlwaysOn" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+        <Description>
+          <![CDATA[Auto-generated tag for AlwaysOn]]>
+        </Description>
+        <Data Format="L5K">
+          <![CDATA[0]]>
+        </Data>
+      </Tag>
+      <Tag Name="Condition_Toggle" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+        <Description>
+          <![CDATA[Auto-generated tag for Condition_Toggle]]>
+        </Description>
+        <Data Format="L5K">
+          <![CDATA[0]]>
+        </Data>
+      </Tag>
+      <Tag Name="DI01" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+        <Description>
+          <![CDATA[Auto-generated tag for DI01]]>
+        </Description>
+        <Data Format="L5K">
+          <![CDATA[0]]>
+        </Data>
+      </Tag>
+      <Tag Name="DI02" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+        <Description>
+          <![CDATA[Auto-generated tag for DI02]]>
+        </Description>
+        <Data Format="L5K">
+          <![CDATA[0]]>
+        </Data>
+      </Tag>
+      <Tag Name="DI03" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+        <Description>
+          <![CDATA[Auto-generated tag for DI03]]>
+        </Description>
+        <Data Format="L5K">
+          <![CDATA[0]]>
+        </Data>
+      </Tag>
+      <Tag Name="DI04" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+        <Description>
+          <![CDATA[Auto-generated tag for DI04]]>
+        </Description>
+        <Data Format="L5K">
+          <![CDATA[0]]>
+        </Data>
+      </Tag>
+      <Tag Name="DI05" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+        <Description>
+          <![CDATA[Auto-generated tag for DI05]]>
+        </Description>
+        <Data Format="L5K">
+          <![CDATA[0]]>
+        </Data>
+      </Tag>
+      <Tag Name="DI06" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+        <Description>
+          <![CDATA[Auto-generated tag for DI06]]>
+        </Description>
+        <Data Format="L5K">
+          <![CDATA[0]]>
+        </Data>
+      </Tag>
+      <Tag Name="DI07" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+        <Description>
+          <![CDATA[Auto-generated tag for DI07]]>
+        </Description>
+        <Data Format="L5K">
+          <![CDATA[0]]>
+        </Data>
+      </Tag>
+      <Tag Name="DI08" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+        <Description>
+          <![CDATA[Auto-generated tag for DI08]]>
+        </Description>
+        <Data Format="L5K">
+          <![CDATA[0]]>
+        </Data>
+      </Tag>
+      <Tag Name="DI09" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+        <Description>
+          <![CDATA[Auto-generated tag for DI09]]>
+        </Description>
+        <Data Format="L5K">
+          <![CDATA[0]]>
+        </Data>
+      </Tag>
+      <Tag Name="DI10" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+        <Description>
+          <![CDATA[Auto-generated tag for DI10]]>
+        </Description>
+        <Data Format="L5K">
+          <![CDATA[0]]>
+        </Data>
+      </Tag>
+      <Tag Name="DI11" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+        <Description>
+          <![CDATA[Auto-generated tag for DI11]]>
+        </Description>
+        <Data Format="L5K">
+          <![CDATA[0]]>
+        </Data>
+      </Tag>
+      <Tag Name="DI92" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+        <Description>
+          <![CDATA[Auto-generated tag for DI92]]>
+        </Description>
+        <Data Format="L5K">
+          <![CDATA[0]]>
+        </Data>
+      </Tag>
+      <Tag Name="Sequence_Complete" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+        <Description>
+          <![CDATA[Auto-generated tag for Sequence_Complete]]>
+        </Description>
+        <Data Format="L5K">
+          <![CDATA[0]]>
+        </Data>
+      </Tag>
+      <Tag Name="Step_100_Enable" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+        <Description>
+          <![CDATA[Auto-generated tag for Step_100_Enable]]>
+        </Description>
+        <Data Format="L5K">
+          <![CDATA[0]]>
+        </Data>
+      </Tag>
+      <Tag Name="Step_10_Enable" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+        <Description>
+          <![CDATA[Auto-generated tag for Step_10_Enable]]>
+        </Description>
+        <Data Format="L5K">
+          <![CDATA[0]]>
+        </Data>
+      </Tag>
+      <Tag Name="Step_110_Enable" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+        <Description>
+          <![CDATA[Auto-generated tag for Step_110_Enable]]>
+        </Description>
+        <Data Format="L5K">
+          <![CDATA[0]]>
+        </Data>
+      </Tag>
+      <Tag Name="Step_20_Enable" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+        <Description>
+          <![CDATA[Auto-generated tag for Step_20_Enable]]>
+        </Description>
+        <Data Format="L5K">
+          <![CDATA[0]]>
+        </Data>
+      </Tag>
+      <Tag Name="Step_30_Enable" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+        <Description>
+          <![CDATA[Auto-generated tag for Step_30_Enable]]>
+        </Description>
+        <Data Format="L5K">
+          <![CDATA[0]]>
+        </Data>
+      </Tag>
+      <Tag Name="Step_40_Enable" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+        <Description>
+          <![CDATA[Auto-generated tag for Step_40_Enable]]>
+        </Description>
+        <Data Format="L5K">
+          <![CDATA[0]]>
+        </Data>
+      </Tag>
+      <Tag Name="Step_50_Enable" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+        <Description>
+          <![CDATA[Auto-generated tag for Step_50_Enable]]>
+        </Description>
+        <Data Format="L5K">
+          <![CDATA[0]]>
+        </Data>
+      </Tag>
+      <Tag Name="Step_60_Enable" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+        <Description>
+          <![CDATA[Auto-generated tag for Step_60_Enable]]>
+        </Description>
+        <Data Format="L5K">
+          <![CDATA[0]]>
+        </Data>
+      </Tag>
+      <Tag Name="Step_70_Enable" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+        <Description>
+          <![CDATA[Auto-generated tag for Step_70_Enable]]>
+        </Description>
+        <Data Format="L5K">
+          <![CDATA[0]]>
+        </Data>
+      </Tag>
+      <Tag Name="Step_80_Enable" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+        <Description>
+          <![CDATA[Auto-generated tag for Step_80_Enable]]>
+        </Description>
+        <Data Format="L5K">
+          <![CDATA[0]]>
+        </Data>
+      </Tag>
+      <Tag Name="Step_90_Enable" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+        <Description>
+          <![CDATA[Auto-generated tag for Step_90_Enable]]>
+        </Description>
+        <Data Format="L5K">
+          <![CDATA[0]]>
+        </Data>
+      </Tag>
+    </Tags>
+    <Programs>
+      <Program Use="Target" Name="Mat_Roll_Transfer_Conveyor1" TestEdits="false" MainRoutineName="" Disabled="false" UseAsFolder="false">
+        <Description>
+          <![CDATA[Auto-generated logic for Mat_Roll_Transfer_Conveyor1]]>
+        </Description>
+        <Routines>
+          <Routine Use="Target" Name="Mat_Roll_Transfer_Conveyor1_StartStop" Type="RLL">
+            <Description>
+              <![CDATA[StartStop logic for Mat_Roll_Transfer_Conveyor1]]>
+            </Description>
+            <RLLContent>
+              <Rung Number="0" Type="N">
+  <Comment>
+    <![CDATA[TC_01 Stopper Up Command - Enable Step 30 when DI02 AND DI92 are active]]>
+  </Comment>
+  <Text>
+    <![CDATA[XIC(DI02)XIC(DI92)OTE(Step_30_Enable);]]>
+  </Text>
+</Rung>
+<Rung Number="1" Type="N">
+  <Comment>
+    <![CDATA[TC_01 Stopper Down Command - Enable Step 80 when DI07 is active]]>
+  </Comment>
+  <Text>
+    <![CDATA[XIC(DI07)OTE(Step_80_Enable);]]>
+  </Text>
+</Rung>
+<Rung Number="2" Type="N">
+  <Comment>
+    <![CDATA[TC_01 Stopper Up Command - Enable Step 110 when DI10 is active]]>
+  </Comment>
+  <Text>
+    <![CDATA[XIC(DI10)OTE(Step_110_Enable);]]>
+  </Text>
+</Rung>
+              <!-- This routine will contain 3 rung(s) -->
+              <!-- Type: StartStop | Priority: 2 -->
+            </RLLContent>
+          </Routine>
+          <Routine Use="Target" Name="Mat_Roll_Transfer_Conveyor1_Auto" Type="RLL">
+            <Description>
+              <![CDATA[Auto logic for Mat_Roll_Transfer_Conveyor1]]>
+            </Description>
+            <RLLContent>
+              <Rung Number="0" Type="N">
+  <Comment>
+    <![CDATA[Waiting for home position - Enable Step 10]]>
+  </Comment>
+  <Text>
+    <![CDATA[XIC(AlwaysOn)OTE(Step_10_Enable);]]>
+  </Text>
+</Rung>
+<Rung Number="1" Type="N">
+  <Comment>
+    <![CDATA[Check for mat present and condition toggle - Enable Step 20]]>
+  </Comment>
+  <Text>
+    <![CDATA[XIC(DI01)XIC(DI92)XIC(Condition_Toggle)OTE(Step_20_Enable);]]>
+  </Text>
+</Rung>
+<Rung Number="2" Type="N">
+  <Comment>
+    <![CDATA[Mat ready to receive - Enable Step 40]]>
+  </Comment>
+  <Text>
+    <![CDATA[XIC(DI03)OTE(Step_40_Enable);]]>
+  </Text>
+</Rung>
+<Rung Number="3" Type="N">
+  <Comment>
+    <![CDATA[Mat receiving in progress - Enable Step 50]]>
+  </Comment>
+  <Text>
+    <![CDATA[XIC(DI04)OTE(Step_50_Enable);]]>
+  </Text>
+</Rung>
+<Rung Number="4" Type="N">
+  <Comment>
+    <![CDATA[Mat receiving completed - Enable Step 60]]>
+  </Comment>
+  <Text>
+    <![CDATA[XIC(DI05)OTE(Step_60_Enable);]]>
+  </Text>
+</Rung>
+<Rung Number="5" Type="N">
+  <Comment>
+    <![CDATA[Mat ready to send to TC-02 - Enable Step 70]]>
+  </Comment>
+  <Text>
+    <![CDATA[XIC(DI06)XIC(DI92)OTE(Step_70_Enable);]]>
+  </Text>
+</Rung>
+<Rung Number="6" Type="N">
+  <Comment>
+    <![CDATA[Mat sending in progress - Enable Step 90]]>
+  </Comment>
+  <Text>
+    <![CDATA[XIC(DI08)XIC(DI92)OTE(Step_90_Enable);]]>
+  </Text>
+</Rung>
+<Rung Number="7" Type="N">
+  <Comment>
+    <![CDATA[Mat sending completed to TC-02 - Enable Step 100]]>
+  </Comment>
+  <Text>
+    <![CDATA[XIC(DI09)OTE(Step_100_Enable);]]>
+  </Text>
+</Rung>
+<Rung Number="8" Type="N">
+  <Comment>
+    <![CDATA[Cycle completed - Set sequence complete]]>
+  </Comment>
+  <Text>
+    <![CDATA[XIC(DI11)OTE(Sequence_Complete);]]>
+  </Text>
+</Rung>
+              <!-- This routine will contain 9 rung(s) -->
+              <!-- Type: Auto | Priority: 3 -->
+            </RLLContent>
+          </Routine>
+        </Routines>
+      </Program>
+    </Programs>
+  </Controller>
+</RSLogix5000Content>

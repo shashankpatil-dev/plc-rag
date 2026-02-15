@@ -1,0 +1,4988 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="33.00" TargetName="AI_Project04"
+	TargetType="Controller" ContainsContext="false" ExportDate="Sat Jan 03 10:14:16 2026"
+	ExportOptions="NoRawData L5KData DecoratedData ForceProtectedEncoding AllProjDocTrans">
+	<Controller Use="Target" Name="AI_Project04" ProcessorType="1769-L18ER-BB1B" MajorRev="33"
+		MinorRev="11" TimeSlice="20" ShareUnusedTimeSlice="1"
+		ProjectCreationDate="Sun Nov 23 17:19:31 2025" LastModifiedDate="Thu Dec 25 20:54:50 2025"
+		SFCExecutionControl="CurrentActive" SFCRestartPosition="MostRecent"
+		SFCLastScan="DontScan" ProjectSN="16#0000_0000" MatchProjectToController="false"
+		CanUseRPIFromProducer="false" InhibitAutomaticFirmwareUpdate="0"
+		PassThroughConfiguration="EnabledWithAppend"
+		DownloadProjectDocumentationAndExtendedProperties="true"
+		DownloadProjectCustomProperties="true" ReportMinorOverflow="false">
+		<RedundancyInfo Enabled="false" KeepTestEditsOnSwitchOver="false" IOMemoryPadPercentage="90"
+			DataTablePadPercentage="50" />
+		<Security Code="0" ChangesToDetect="16#ffff_ffff_ffff_ffff" />
+		<SafetyInfo />
+		<DataTypes>
+			<DataType Name="UDT_Machine" Family="NoFamily" Class="User">
+				<Members>
+					<Member Name="ZZZZZZZZZZUDT_Machin0" DataType="SINT" Dimension="0"
+						Radix="Decimal" Hidden="true" ExternalAccess="Read/Write" />
+					<Member Name="AutoModeSelect" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Machin0" BitNumber="0"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Operator Auto Mode Select]]>
+</Description>
+					</Member>
+					<Member Name="AutoMode" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Machin0" BitNumber="1"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Auto Mode Is Selected]]>
+</Description>
+					</Member>
+					<Member Name="ManualMode" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Machin0" BitNumber="2"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Manual Mode Is Selected]]>
+</Description>
+					</Member>
+					<Member Name="AutoState" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Machin0" BitNumber="3"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Auto Run Is Active]]>
+</Description>
+					</Member>
+					<Member Name="ManualState" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Machin0" BitNumber="4"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Manual Mode Is Active]]>
+</Description>
+					</Member>
+					<Member Name="AutoModeDisable" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Machin0" BitNumber="5"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Auto Mode Select Will Disable Drives]]>
+</Description>
+					</Member>
+					<Member Name="ManualModeDisable" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Machin0" BitNumber="6"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Manual Mode Select Will Disable Drives]]>
+</Description>
+					</Member>
+					<Member Name="InitRequired" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Machin0" BitNumber="7"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Initialisation Necessary]]>
+</Description>
+					</Member>
+					<Member Name="ZZZZZZZZZZUDT_Machin9" DataType="SINT" Dimension="0"
+						Radix="Decimal" Hidden="true" ExternalAccess="Read/Write" />
+					<Member Name="Enable" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Machin9" BitNumber="0"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Enable Machine Axes]]>
+</Description>
+					</Member>
+					<Member Name="Disable" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Machin9" BitNumber="1"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Disable Machine Axes]]>
+</Description>
+					</Member>
+					<Member Name="Start" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false"
+						Target="ZZZZZZZZZZUDT_Machin9" BitNumber="2" ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Start Auto Run]]>
+</Description>
+					</Member>
+					<Member Name="Stop" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false"
+						Target="ZZZZZZZZZZUDT_Machin9" BitNumber="3" ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Stop Auto Run]]>
+</Description>
+					</Member>
+					<Member Name="Hold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false"
+						Target="ZZZZZZZZZZUDT_Machin9" BitNumber="4" ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Hold Auto Run]]>
+</Description>
+					</Member>
+					<Member Name="Continue" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Machin9" BitNumber="5"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Continue Auto Run After Hold]]>
+</Description>
+					</Member>
+					<Member Name="Initialize" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Machin9" BitNumber="6"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Send System Home Position]]>
+</Description>
+					</Member>
+					<Member Name="Abort" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false"
+						Target="ZZZZZZZZZZUDT_Machin9" BitNumber="7" ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Abort Current Move]]>
+</Description>
+					</Member>
+					<Member Name="ZZZZZZZZZZUDT_Machin18" DataType="SINT" Dimension="0"
+						Radix="Decimal" Hidden="true" ExternalAccess="Read/Write" />
+					<Member Name="Reset_All_Sequence" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Machin18" BitNumber="0"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Reset All Sequencing]]>
+</Description>
+					</Member>
+					<Member Name="FaultClear" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Machin18" BitNumber="1"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Clear Faults]]>
+</Description>
+					</Member>
+					<Member Name="Healthy" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Machin18" BitNumber="2"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[All Faults Clear]]>
+</Description>
+					</Member>
+					<Member Name="Faulted" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Machin18" BitNumber="3"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[A Fault Is Present]]>
+</Description>
+					</Member>
+					<Member Name="ManualLoading" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Machin18" BitNumber="4"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Manual Loading]]>
+</Description>
+					</Member>
+					<Member Name="AutoLoading" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Machin18" BitNumber="5"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Auto Loading]]>
+</Description>
+					</Member>
+					<Member Name="AxisResetDone" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Machin18" BitNumber="6"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Fault Reset Complete On All Axes]]>
+</Description>
+					</Member>
+					<Member Name="HomeDone" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Machin18" BitNumber="7"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[System At Home Position]]>
+</Description>
+					</Member>
+					<Member Name="ZZZZZZZZZZUDT_Machin27" DataType="SINT" Dimension="0"
+						Radix="Decimal" Hidden="true" ExternalAccess="Read/Write" />
+					<Member Name="StartDone" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Machin27" BitNumber="0"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Auto Run Has Started]]>
+</Description>
+					</Member>
+					<Member Name="StopDone" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Machin27" BitNumber="1"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Auto Run Has Stopped]]>
+</Description>
+					</Member>
+					<Member Name="HoldDone" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Machin27" BitNumber="2"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Auto Run Hold Active]]>
+</Description>
+					</Member>
+					<Member Name="AbortDone" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Machin27" BitNumber="3"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Abort Move Has Completed]]>
+</Description>
+					</Member>
+					<Member Name="HMI_Line01Run" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Machin27" BitNumber="4"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Specific Line 1 Running]]>
+</Description>
+					</Member>
+					<Member Name="HMI_Line02Run" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Machin27" BitNumber="5"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Specific Line 1 Running]]>
+</Description>
+					</Member>
+					<Member Name="HMI_BothLineRunning" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Machin27" BitNumber="6"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Both Line Running]]>
+</Description>
+					</Member>
+					<Member Name="Reset_Selected_Sequence" DataType="BIT" Dimension="0"
+						Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin27" BitNumber="7"
+						ExternalAccess="Read/Write" />
+				</Members>
+			</DataType>
+			<DataType Name="UDT_Sequencer" Family="NoFamily" Class="User">
+				<Description>
+<![CDATA[Sequence]]>
+</Description>
+				<Members>
+					<Member Name="ZZZZZZZZZZUDT_Sequen0" DataType="SINT" Dimension="0"
+						Radix="Decimal" Hidden="true" ExternalAccess="Read/Write" />
+					<Member Name="Hold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false"
+						Target="ZZZZZZZZZZUDT_Sequen0" BitNumber="0" ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Hold]]>
+</Description>
+					</Member>
+					<Member Name="Continue" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Sequen0" BitNumber="1"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Continue]]>
+</Description>
+					</Member>
+					<Member Name="Reset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false"
+						Target="ZZZZZZZZZZUDT_Sequen0" BitNumber="2" ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Reset]]>
+</Description>
+					</Member>
+					<Member Name="Interlocks" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Sequen0" BitNumber="3"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Interlocks]]>
+</Description>
+					</Member>
+					<Member Name="Active" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Sequen0" BitNumber="4"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Active]]>
+</Description>
+					</Member>
+					<Member Name="Abort" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false"
+						Target="ZZZZZZZZZZUDT_Sequen0" BitNumber="5" ExternalAccess="Read/Write" />
+					<Member Name="Step" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Step]]>
+</Description>
+					</Member>
+					<Member Name="Input" DataType="DINT" Dimension="2" Radix="Decimal"
+						Hidden="false" ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Control Inputs]]>
+</Description>
+					</Member>
+					<Member Name="Output" DataType="DINT" Dimension="2" Radix="Decimal"
+						Hidden="false" ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Control Outputs]]>
+</Description>
+					</Member>
+					<Member Name="Timer" DataType="TIMER" Dimension="25" Radix="NullType"
+						Hidden="false" ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Timers]]>
+</Description>
+					</Member>
+					<Member Name="Counter" DataType="COUNTER" Dimension="5" Radix="NullType"
+						Hidden="false" ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Counters]]>
+</Description>
+					</Member>
+					<Member Name="ZZZZZZZZZZUDT_Sequen12" DataType="SINT" Dimension="0"
+						Radix="Decimal" Hidden="true" ExternalAccess="Read/Write" />
+					<Member Name="AutoMode" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Sequen12" BitNumber="0"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Auto Mode]]>
+</Description>
+					</Member>
+					<Member Name="ManualMode" DataType="BIT" Dimension="0" Radix="Decimal"
+						Hidden="false" Target="ZZZZZZZZZZUDT_Sequen12" BitNumber="1"
+						ExternalAccess="Read/Write">
+						<Description>
+<![CDATA[Manual Mode]]>
+</Description>
+					</Member>
+				</Members>
+			</DataType>
+		</DataTypes>
+		<Modules>
+			<Module Name="Local" CatalogNumber="1769-L18ER-BB1B" Vendor="1" ProductType="14"
+				ProductCode="154" Major="33" Minor="11" ParentModule="Local" ParentModPortId="1"
+				Inhibited="false" MajorFault="true"
+			>
+				<EKey State="Disabled" />
+				<Ports>
+					<Port Id="1" Address="0" Type="PointIO" Upstream="false">
+						<Bus Size="2" />
+					</Port>
+					<Port Id="2" Type="Ethernet" Upstream="false">
+						<Bus />
+					</Port>
+				</Ports>
+			</Module>
+			<Module Name="Discrete_IO" CatalogNumber="Embedded" Vendor="1" ProductType="7"
+				ProductCode="1140" Major="33" Minor="11" ParentModule="Local" ParentModPortId="1"
+				Inhibited="false" MajorFault="true"
+			>
+				<EKey State="CompatibleModule" />
+				<Ports>
+					<Port Id="1" Address="1" Type="PointIO" Upstream="true" />
+				</Ports>
+				<Communications>
+					<ConfigTag ConfigSize="80" ExternalAccess="Read/Write">
+						<Data Format="L5K">
+<![CDATA[[84,113,1,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000
+		,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,0,0,0,0,0,0]]]>
+</Data>
+						<Data Format="Decorated">
+							<Structure DataType="AB:Embedded_DiscreteIO:C:0">
+								<DataValueMember Name="Pt00FilterOffOn" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt00FilterOnOff" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt01FilterOffOn" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt01FilterOnOff" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt02FilterOffOn" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt02FilterOnOff" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt03FilterOffOn" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt03FilterOnOff" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt04FilterOffOn" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt04FilterOnOff" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt05FilterOffOn" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt05FilterOnOff" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt06FilterOffOn" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt06FilterOnOff" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt07FilterOffOn" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt07FilterOnOff" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt08FilterOffOn" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt08FilterOnOff" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt09FilterOffOn" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt09FilterOnOff" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt10FilterOffOn" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt10FilterOnOff" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt11FilterOffOn" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt11FilterOnOff" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt12FilterOffOn" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt12FilterOnOff" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt13FilterOffOn" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt13FilterOnOff" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt14FilterOffOn" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt14FilterOnOff" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt15FilterOffOn" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="Pt15FilterOnOff" DataType="INT"
+									Radix="Decimal" Value="1000" />
+								<DataValueMember Name="FaultMode" DataType="INT" Radix="Binary"
+									Value="2#0000_0000_0000_0000" />
+								<DataValueMember Name="FaultValue" DataType="INT" Radix="Binary"
+									Value="2#0000_0000_0000_0000" />
+								<DataValueMember Name="ProgMode" DataType="INT" Radix="Binary"
+									Value="2#0000_0000_0000_0000" />
+								<DataValueMember Name="ProgValue" DataType="INT" Radix="Binary"
+									Value="2#0000_0000_0000_0000" />
+								<DataValueMember Name="COSOnOffEn" DataType="INT" Radix="Binary"
+									Value="2#0000_0000_0000_0000" />
+								<DataValueMember Name="COSOffOnEn" DataType="INT" Radix="Binary"
+									Value="2#0000_0000_0000_0000" />
+							</Structure>
+						</Data>
+					</ConfigTag>
+					<Connections>
+						<Connection Name="Data" RPI="20000" Type="Output" EventID="0"
+							ProgrammaticallySendEventTrigger="false" Unicast="false">
+							<InputTag ExternalAccess="Read/Write">
+								<Data Format="Decorated">
+									<Structure DataType="AB:Embedded_DiscreteIO:I:0">
+										<DataValueMember Name="Fault" DataType="DINT" Radix="Binary"
+											Value="2#0000_0000_0000_0000_0000_0000_0000_0000" />
+										<DataValueMember Name="Data" DataType="INT" Radix="Binary"
+											Value="2#0000_0000_0000_0000" />
+									</Structure>
+								</Data>
+							</InputTag>
+							<OutputTag ExternalAccess="Read/Write">
+								<Data Format="L5K">
+<![CDATA[[0]]]>
+</Data>
+								<Data Format="Decorated">
+									<Structure DataType="AB:Embedded_DiscreteIO:O:0">
+										<DataValueMember Name="Data" DataType="INT" Radix="Binary"
+											Value="2#0000_0000_0000_0000" />
+									</Structure>
+								</Data>
+							</OutputTag>
+						</Connection>
+					</Connections>
+				</Communications>
+				<ExtendedProperties>
+					<public>
+						<ConfigID>100</ConfigID>
+						<CatNum>Embedded</CatNum>
+					</public>
+				</ExtendedProperties>
+			</Module>
+		</Modules>
+		<AddOnInstructionDefinitions />
+		<Tags>
+			<Tag Name="AlwaysOn" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Data Format="L5K">
+<![CDATA[1]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="1" />
+				</Data>
+			</Tag>
+			<Tag Name="DI01" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI01_System_Start_PB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI02" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI02_System_Stop_PB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI03" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI03_System_Reset_PB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI04" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI04_System_Safety_Reset_PB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI05" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI05_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI06" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI06_System_3_Phase_Supply_OK]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI07" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI07_System_Air_Pressure_Switch]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI08" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI08_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI09" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI09_Mat_Roll_Transfer_Conveyor_1_Trip_Healthy]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI10" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI10_Mat_Roll_Transfer_Conveyor_2_Trip_Healthy]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI100" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI100_Mat_Roll_Transfer_Conveyor_9_Exit_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI101" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI101_Mat_Roll_Transfer_Conveyor_9_Stopper_Cylinder_Fwd_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI102" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI102_Mat_Roll_Transfer_Conveyor_9_Stopper_Cylinder_Rev_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI103" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI103_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI104" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI104_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI105" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI105_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI106" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI106_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI107" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI107_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI108" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI108_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI109" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI109_Mat_Roll_Insertion_ARM_Cylinder_Fwd_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI11" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI11_Mat_Roll_Transfer_Conveyor_3_Trip_Healthy]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI110" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI110_Mat_Roll_Insertion_ARM_Guide_Cylinder_Rev_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI111" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI111_Mat_Roll_Insertion_Funnel_LH_Cylinder_Fwd_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI112" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI112_Mat_Roll_Insertion_Funnel_LH_Cylinder_Rev_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI113" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI113_Mat_Roll_Insertion_Funnel_RH_Cylinder_Fwd_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI114" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI114_Mat_Roll_Insertion_Funnel_RH_Cylinder_Rev_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI115" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI115_Mat_Roll_Carton_Reference_LH_Cylinder_Fwd_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI116" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI116_Mat_Roll_Carton_Reference_LH_Cylinder_Rev_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI117" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI117_Mat_Roll_Carton_Reference_RH_Cylinder_Fwd_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI118" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI118_Mat_Roll_Carton_Reference_RH_Cylinder_Rev_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI119" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI119_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI12" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI12_Mat_Roll_Transfer_Conveyor_4_Trip_Healthy]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI120" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI120_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI121" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI121_Slat_Conveyor_Carton_Present_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI122" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI122_Slat_Conveyor_Index_Proxy]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI123" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI123_Slat_Conveyor_Index_Slow_Proxy_]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI124" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI124_Slat_Conveyor_Inseration_Station_Carton_Present_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI125" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI125_Carton_Bottom_Tape_Present_Sensor_01]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI126" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI126_Carton_Bottom_Tape_Present_Sensor_02]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI127" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI127_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI128" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI128_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI129" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI129_Carton_Present_Sensor_at_Flap_Folding_Station]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI13" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI13_Mat_Roll_Transfer_Conveyor_5_Trip_Healthy]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI130" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI130_Carton_Flap_Folding_Vertical_Flap_Cylinder_Open_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI131" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI131_Carton_Flap_Folding_Vertical_Flap_Cylinder_Close_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI132" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI132_Carton_Flap_Folding_Horizontal_Flap_Cylinder_1_Open_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI133" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI133_Carton_Flap_Folding_Horizontal_Flap_Cylinder_1_Close_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI134" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI134_Carton_Flap_Folding_Horizontal_Flap_Cylinder_2_Open_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI135" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI135_Carton_Flap_Folding_Horizontal_Flap_Cylinder_2_Close_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI136" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI136_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI137" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI137_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI138" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI138_Carton_Present_Sensor_at_Flap_Folding_Station]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI139" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI139_Carton_Vertical_Taping_Z_Slide_Up_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI14" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI14_Mat_Roll_Transfer_Conveyor_6_Trip_Healthy]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI140" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI140_Carton_Vertical_Taping_Z_Slide_Rev_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI141" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI141_Carton_Vertical_Taping_Y_Slide_Fwd_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI142" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI142_Carton_Vertical_Taping_Y_Slide_Rev_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI143" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI143_Carton_Vertical_Taping_Flap_Cylinder_Open_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI144" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI144_Carton_Vertical_Taping_Flap_Cylinder_Close_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI145" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI145_Carton_Vertical_Taping_Tape_empty_sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI146" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI146_Carton_Horizontal_Taping_Tape_empty_sensor_1]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI147" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI147_Carton_Horizontal_Taping_Tape_empty_sensor_2]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI148" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI148_Carton_Present_Sensor_at_Carton_Pusher_Station]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI149" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI149_Carton_Pusher_Cylinder_Fwd_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI15" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI15_Mat_Roll_Transfer_Conveyor_7_Trip_Healthy]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI150" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI150_Carton_Pusher_Cylinder_Rev_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI151" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI151_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI152" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI152_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI153" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI153_Mat_Roll_Transfer_Conveyor_10_Entry_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI154" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI154_Mat_Roll_Transfer_Conveyor_10_Exit_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI155" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI155_Carton_Print_Trigger_sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI156" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI156_Mat_Roll_Transfer_Conveyor_10_Stopper_Cylinder_Up_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI157" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI157_Mat_Roll_Transfer_Conveyor_10_Stopper_Cylinder_Dn_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI158" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI158_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI159" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI159_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI16" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI16_Mat_Roll_Transfer_Conveyor_8_Trip_Healthy]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI160" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI160_Mat_Roll_Transfer_Conveyor_11_Entry_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI161" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI161_Mat_Roll_Transfer_Conveyor_11_Exit_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI162" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI162_Mat_Roll_Carton_Tilter_Down_Position_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI163" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI163_Mat_Roll_Carton_Tilter_Up_Position_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI164" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI164_Mat_Roll_Carton_Referencing_Cylinder_Fwd_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI165" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI165_Mat_Roll_Carton_Referencing_Cylinder_Rev_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI166" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI166_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI167" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI167_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI168" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI168_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI169" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI169_Safety_Door_01_OpenRequest_PB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI17" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI17_Mat_Roll_Transfer_Conveyor_9_Trip_Healthy]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI170" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI170_Safety_Door_01_CloseRequest_PB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI171" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI171_Safety_Door_02_OpenRequest_PB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI172" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI172_Safety_Door_02_CloseRequest_PB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI173" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI173_Safety_Door_03_OpenRequest_PB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI174" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI174_Safety_Door_03_CloseRequest_PB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI175" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI175_Safety_Door_04_OpenRequest_PB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI176" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI176_Safety_Door_04_CloseRequest_PB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI177" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI177_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI178" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI178_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI179" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI179_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI18" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI18_Mat_Roll_Transfer_Conveyor_10_Trip_Healthy]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI180" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI180_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI181" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI181_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI182" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI182_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI183" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI183_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI184" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI184_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI19" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI19_Mat_Roll_Transfer_Conveyor_11_Trip_Healthy]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI20" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI20_Mat_Roll_Transfer_Turn_Table_Conveyor_Trip_Healthy]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI21" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI21_Mat_Roll_Transfer_Turn_Table_Motor_Trip_Healthy]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI22" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI22_Mat_Roll_Pusher_LH_Servo_Slide_Trip_Healthy]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI23" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI23_Mat_Roll_Pusher_RH_Servo_Slide_Trip_Healthy]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI24" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI24_Cartoon_Box_Transfer_Slat_Conveyor_Trip_Healthy]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI25" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI25_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI26" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI26_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI27" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI27_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI28" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI28_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI29" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI29_Mat_Roll_Transfer_Conveyor_1_Disconnector_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI30" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI30_Mat_Roll_Transfer_Conveyor_2_Disconnector_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI31" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI31_Mat_Roll_Transfer_Conveyor_3_Disconnector_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI32" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI32_Mat_Roll_Transfer_Conveyor_4_Disconnector_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI33" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI33_Mat_Roll_Transfer_Conveyor_5_Disconnector_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI34" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI34_Mat_Roll_Transfer_Conveyor_6_Disconnector_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI35" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI35_Mat_Roll_Transfer_Conveyor_7_Disconnector_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI36" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI36_Mat_Roll_Transfer_Conveyor_8_Disconnector_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI37" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI37_Mat_Roll_Transfer_Conveyor_9_Disconnector_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI38" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI38_Mat_Roll_Transfer_Conveyor_10_Disconnector_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI39" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI39_Mat_Roll_Transfer_Conveyor_11_Disconnector_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI40" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI40_Mat_Roll_Transfer_Turn_Table_Conveyor_Disconnector_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI41" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI41_Mat_Roll_Transfer_Turn_Table_Motor_Disconnector_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI42" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI42_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI43" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI43_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI44" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI44_Cartoon_Box_Transfer_Slat_Conveyor_Disconnector_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI45" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI45_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI46" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI46_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI47" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI47_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI48" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI48_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI49" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI49_Mat_Roll_Transfer_Conveyor_1_Entry_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI50" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI50_Mat_Roll_Transfer_Conveyor_1_Exit_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI51" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI51_Mat_Roll_Transfer_Conveyor_1_Stopper_Cylinder_Up_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI52" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI52_Mat_Roll_Transfer_Conveyor_1_Stopper_Cylinder_Dn_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI53" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI53_Mat_Roll_Transfer_Conveyor_2_Entry_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI54" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI54_Mat_Roll_Transfer_Conveyor_2_Exit_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI55" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI55_Mat_Roll_Transfer_Conveyor_2_Stopper_Cylinder_Up_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI56" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI56_Mat_Roll_Transfer_Conveyor_2_Stopper_Cylinder_Dn_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI57" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI57_Mat_Roll_TurnTable_Conveyor_Entry_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI58" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI58_Mat_Roll_TurnTable_Conveyor_Entry_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI59" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI59_Mat_Roll_TurnTable_Fwd_Proxy_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI60" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI60_Mat_Roll_TurnTable_Fwd_SlDn_Proxy_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI61" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI61_Mat_Roll_TurnTable_Fwd_Proxy_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI62" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI62_Mat_Roll_TurnTable_Fwd_SlDn_Proxy_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI63" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI63_Mat_Roll_TurnTable_Stopper_Cylinder_Up_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI64" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI64_Mat_Roll_TurnTable_Stopper_Cylinder_Dn_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI65" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI65_Mat_Roll_Transfer_Conveyor_3_Entry_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI66" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI66_Mat_Roll_Transfer_Conveyor_3_Exit_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI67" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI67_Mat_Roll_Transfer_Conveyor_3_Stopper_Cylinder_Up_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI68" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI68_Mat_Roll_Transfer_Conveyor_3_Stopper_Cylinder_Dn_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI69" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI69_Mat_Roll_Transfer_Conveyor_3_Lifter_Cylinder_Up_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI70" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI70_Mat_Roll_Transfer_Conveyor_3_Lifter_Cylinder_Dn_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI71" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI71_Mat_Roll_Transfer_Conveyor_3_Transfer_Cylinder_Up_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI72" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI72_Mat_Roll_Transfer_Conveyor_3_Transfer_Cylinder_Dn_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI73" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI73_Mat_Roll_Transfer_Conveyor_4_Entry_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI74" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI74_Mat_Roll_Transfer_Conveyor_4_Exit_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI75" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI75_Mat_Roll_Transfer_Conveyor_4_Cylinder_Up_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI76" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI76_Mat_Roll_Transfer_Conveyor_4_Cylinder_Dn_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI77" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI77_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI78" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI78_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI79" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI79_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI80" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI80_Spare_DI]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI81" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI81_Mat_Roll_Transfer_Conveyor_5_Entry_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI82" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI82_Mat_Roll_Transfer_Conveyor_5_Exit_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI83" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI83_Mat_Roll_Transfer_Conveyor_6_Entry_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI84" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI84_Mat_Roll_Transfer_Conveyor_6_Exit_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI85" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI85_Mat_Roll_Transfer_Conveyor_6_Conveyor_Align_Sensor_01]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI86" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI86_Mat_Roll_Transfer_Conveyor_6_Conveyor_Align_Sensor_02]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI87" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI87_Mat_Roll_Transfer_Conveyor_7_Entry_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI88" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI88_Mat_Roll_Transfer_Conveyor_7_Exit_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI89" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI89_Mat_Roll_Transfer_Conveyor_7_Stopper_Cylinder_Up_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI90" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI90_Mat_Roll_Transfer_Conveyor_7_Stopper_Cylinder_Dn_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI91" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI91_Mat_Roll_Transfer_Conveyor_7_Lifter_Cylinder_Up_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI92" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI92_Mat_Roll_Transfer_Conveyor_7_Lifter_Cylinder_Dn_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI93" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI93_Mat_Roll_Transfer_Conveyor_7_Transfer_Cylinder_Up_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI94" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI94_Mat_Roll_Transfer_Conveyor_7_Transfer_Cylinder_Dn_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI95" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI95_Mat_Roll_Transfer_Conveyor_8_Entry_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI96" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI96_Mat_Roll_Transfer_Conveyor_8_Exit_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI97" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI97_Mat_Roll_Transfer_Conveyor_8_Cylinder_Up_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI98" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI98_Mat_Roll_Transfer_Conveyor_8_Cylinder_Dn_FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DI99" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DI99_Mat_Roll_Transfer_Conveyor_9_Entry_Sensor]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO01" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO01_System Tower Lamp Red]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO02" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO02_System Tower Lamp Amber]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO03" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO03_System Tower Lamp Green]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO04" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO04_System Tower Lamp Buzzer]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO05" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO05_Packing System Start PB Green Lamp]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO06" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO06_Packing System Reset PB Blue Lamp]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO07" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO07_Packing System Safety Reset PB Yellow Lamp]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO08" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO08_Spare DO]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO09" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO09_Mat Roll Transfer Conveyor-1 Stopper Cylinder Up SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO10" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO10_Mat Roll Transfer Conveyor-1 Stopper Cylinder Dn SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO11" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO11_Mat Roll Transfer Conveyor-2 Stopper Cylinder Up SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO12" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO12_Mat Roll Transfer Conveyor-2 Stopper Cylinder Dn SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO13" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO13_Mat Roll TurnTable Stopper Cylinder Up SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO14" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO14_Mat Roll TurnTable Stopper Cylinder Dn SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO15" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO15_Mat Roll Transfer Conveyor-3 Stopper Cylinder Up SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO16" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO16_Mat Roll Transfer Conveyor-3 Stopper Cylinder Dn SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO17" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO17_Mat Roll Transfer Conveyor-4 Cylinder Up SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO18" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO18_Mat Roll Transfer Conveyor-4 Cylinder Dn SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO19" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO19_Mat Roll Transfer Conveyor-7 Stopper Cylinder Up SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO20" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO20_Mat Roll Transfer Conveyor-7 Stopper Cylinder Dn SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO21" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO21_Mat Roll Transfer Conveyor-8 Cylinder Up SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO22" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO22_Mat Roll Transfer Conveyor-8 Cylinder Dn SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO23" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO23_Mat Roll Transfer Conveyor-9 Stopper Cylinder Fwd SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO24" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO24_Mat Roll Transfer Conveyor-9 Stopper Cylinder Rev SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO25" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO25_Mat Roll Insertion Funnel LH/RH Cylinder Fwd SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO26" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO26_Mat Roll Insertion Funnel LH/RH Cylinder Rev SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO27" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO27_Mat Roll Carton Reference LH/RH Cylinder Fwd SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO28" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO28_Mat Roll Carton Reference LH/RH Cylinder Rev SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO29" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO29_Spare DO]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO30" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO30_Spare DO]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO31" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO31_Spare DO]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO32" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO32_Spare DO]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO33" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO33_Carton Flap Folding Vertical Flap Cylinder Open FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO34" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO34_Carton Flap Folding Vertical Flap Cylinder Close FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO35" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO35_Carton Flap Folding Horizontal Flap Cylinder-1/2 Open FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO36" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO36_Carton Flap Folding Horizontal Flap Cylinder-1/2 Close FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO37" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO37_Carton Vertical Taping Z-Slide Up FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO38" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO38_Carton Vertical Taping Z-Slide Rev FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO39" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO39_Carton Vertical Taping Y-Slide Fwd FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO40" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO40_Carton Vertical Taping Y-Slide Rev FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO41" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO41_Carton Vertical Taping Flap Cylinder Open FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO42" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO42_Carton Vertical Taping Flap Cylinder Close FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO43" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO43_Carton Pusher Cylinder Fwd FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO44" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO44_Carton Pusher Cylinder Rev FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO45" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO45_Mat Roll Transfer Conveyor-10 Stopper Cylinder Up FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO46" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO46_Mat Roll Transfer Conveyor-10 Stopper Cylinder Dn FB]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO47" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO47_Mat Roll Carton Tilter Down Position SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO48" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO48_Mat Roll Carton Tilter Up Position SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO49" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO49_Mat Roll Carton Referencing Cylinder Fwd SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO50" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO50_Mat Roll Carton Referencing Cylinder Rev SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO51" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO51_Spare DO]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO52" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO52_Spare DO]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO53" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO53_Spare DO]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO54" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO54_Spare DO]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO55" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO55_Mat Roll Transfer Conveyor-3 Lifter Cylinder Up SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO56" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO56_Mat Roll Transfer Conveyor-3 Lifter Cylinder Dn SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO57" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO57_Mat Roll Transfer Conveyor-3 Transfer Cylinder Up SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO58" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO58_Mat Roll Transfer Conveyor-3 Transfer Cylinder Dn SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO59" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO59_Mat Roll Transfer Conveyor-7 Lifter Cylinder Up SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO60" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO60_Mat Roll Transfer Conveyor-7 Lifter Cylinder Dn SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO61" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO61_Mat Roll Transfer Conveyor-7 Transfer Cylinder Up SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO62" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO62_Mat Roll Transfer Conveyor-7 Transfer Cylinder Dn SOV]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO63" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO63_Spare DO]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO64" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO64_Spare DO]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO65" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO65_Safety Door 01 OpenRequest PB Lamp]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO66" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO66_Safety Door 01 CloseRequest PB Lamp]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO67" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO67_Safety Door 02 OpenRequest PB Lamp]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO68" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO68_Safety Door 02 CloseRequest PB Lamp]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO69" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO69_Safety Door 03 OpenRequest PB Lamp]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO70" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO70_Safety Door 03 CloseRequest PB Lamp]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO71" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO71_Safety Door 04 OpenRequest PB Lamp]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="DO72" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Description>
+<![CDATA[DO72_Safety Door 04 CloseRequest PB Lamp]]>
+</Description>
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+			<Tag Name="Mat_Roll_Transfer_Conveyor1" TagType="Base" DataType="UDT_Sequencer"
+				Constant="false" ExternalAccess="Read/Write">
+				<Comments>
+					<Comment Operand=".OUTPUT[0].0">
+<![CDATA[Waiting_For_Home]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].1">
+<![CDATA[Check_For_Mat_Present]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].2">
+<![CDATA[TC_01 Stopper_Up_Command]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].3">
+<![CDATA[Mat Ready_To_Recieve]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].4">
+<![CDATA[Mat_Receiving_in_Progress]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].5">
+<![CDATA[Mat_Receiving_Completed]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].6">
+<![CDATA[Mat_Ready_To_Send_to_TC_02]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].7">
+<![CDATA[TC_01 Stopper_Down_Command]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].8">
+<![CDATA[Mat_Sending_In_Progress]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].9">
+<![CDATA[Mat_Sending_Completed_to_TC02]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].10">
+<![CDATA[TC_01 Stopper_Up_Command]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].11">
+<![CDATA[Cycle_Completed]]>
+</Comment>
+				</Comments>
+				<Data Format="L5K">
+<![CDATA[[0,0,[0,0],[0,0],[[0,0,0],[0,0,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100
+		,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0]],[[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0]],0]]]>
+</Data>
+				<Data Format="Decorated">
+					<Structure DataType="UDT_Sequencer">
+						<DataValueMember Name="Hold" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Continue" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Reset" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Interlocks" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Active" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Abort" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Step" DataType="DINT" Radix="Decimal" Value="0" />
+						<ArrayMember Name="Input" DataType="DINT" Dimensions="2" Radix="Decimal">
+							<Element Index="[0]" Value="0" />
+							<Element Index="[1]" Value="0" />
+						</ArrayMember>
+						<ArrayMember Name="Output" DataType="DINT" Dimensions="2" Radix="Decimal">
+							<Element Index="[0]" Value="0" />
+							<Element Index="[1]" Value="0" />
+						</ArrayMember>
+						<ArrayMember Name="Timer" DataType="TIMER" Dimensions="25">
+							<Element Index="[0]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[1]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[2]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[3]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[4]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[5]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[6]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[7]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[8]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[9]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[10]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[11]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[12]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[13]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[14]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[15]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[16]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[17]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[18]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[19]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[20]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[21]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[22]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[23]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[24]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+						</ArrayMember>
+						<ArrayMember Name="Counter" DataType="COUNTER" Dimensions="5">
+							<Element Index="[0]">
+								<Structure DataType="COUNTER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="CU" DataType="BOOL" Value="0" />
+									<DataValueMember Name="CD" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="OV" DataType="BOOL" Value="0" />
+									<DataValueMember Name="UN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[1]">
+								<Structure DataType="COUNTER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="CU" DataType="BOOL" Value="0" />
+									<DataValueMember Name="CD" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="OV" DataType="BOOL" Value="0" />
+									<DataValueMember Name="UN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[2]">
+								<Structure DataType="COUNTER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="CU" DataType="BOOL" Value="0" />
+									<DataValueMember Name="CD" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="OV" DataType="BOOL" Value="0" />
+									<DataValueMember Name="UN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[3]">
+								<Structure DataType="COUNTER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="CU" DataType="BOOL" Value="0" />
+									<DataValueMember Name="CD" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="OV" DataType="BOOL" Value="0" />
+									<DataValueMember Name="UN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[4]">
+								<Structure DataType="COUNTER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="CU" DataType="BOOL" Value="0" />
+									<DataValueMember Name="CD" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="OV" DataType="BOOL" Value="0" />
+									<DataValueMember Name="UN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+						</ArrayMember>
+						<DataValueMember Name="AutoMode" DataType="BOOL" Value="0" />
+						<DataValueMember Name="ManualMode" DataType="BOOL" Value="0" />
+					</Structure>
+				</Data>
+			</Tag>
+			<Tag Name="Mat_Roll_Transfer_Conveyor2" TagType="Base" DataType="UDT_Sequencer"
+				Constant="false" ExternalAccess="Read/Write">
+				<Comments>
+					<Comment Operand=".OUTPUT[0].0">
+<![CDATA[Waiting_For_Home]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].1">
+<![CDATA[Check_For_Mat_Present]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].2">
+<![CDATA[TC_01 Stopper_Up_Command]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].3">
+<![CDATA[Mat Ready_To_Recieve]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].4">
+<![CDATA[Mat_Receiving_in_Progress]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].5">
+<![CDATA[Mat_Receiving_Completed]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].6">
+<![CDATA[Mat_Ready_To_Send_to_TC_02]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].7">
+<![CDATA[TC_01 Stopper_Down_Command]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].8">
+<![CDATA[Mat_Sending_In_Progress]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].9">
+<![CDATA[Mat_Sending_Completed_to_TC02]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].10">
+<![CDATA[TC_01 Stopper_Up_Command]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].11">
+<![CDATA[Cycle_Completed]]>
+</Comment>
+				</Comments>
+				<Data Format="L5K">
+<![CDATA[[0,0,[0,0],[0,0],[[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0
+		],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0]],[[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0]],0]]]>
+</Data>
+				<Data Format="Decorated">
+					<Structure DataType="UDT_Sequencer">
+						<DataValueMember Name="Hold" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Continue" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Reset" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Interlocks" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Active" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Abort" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Step" DataType="DINT" Radix="Decimal" Value="0" />
+						<ArrayMember Name="Input" DataType="DINT" Dimensions="2" Radix="Decimal">
+							<Element Index="[0]" Value="0" />
+							<Element Index="[1]" Value="0" />
+						</ArrayMember>
+						<ArrayMember Name="Output" DataType="DINT" Dimensions="2" Radix="Decimal">
+							<Element Index="[0]" Value="0" />
+							<Element Index="[1]" Value="0" />
+						</ArrayMember>
+						<ArrayMember Name="Timer" DataType="TIMER" Dimensions="25">
+							<Element Index="[0]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[1]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[2]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[3]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[4]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[5]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[6]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[7]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[8]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[9]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[10]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[11]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[12]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[13]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[14]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[15]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[16]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[17]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[18]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[19]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[20]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[21]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[22]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[23]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[24]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+						</ArrayMember>
+						<ArrayMember Name="Counter" DataType="COUNTER" Dimensions="5">
+							<Element Index="[0]">
+								<Structure DataType="COUNTER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="CU" DataType="BOOL" Value="0" />
+									<DataValueMember Name="CD" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="OV" DataType="BOOL" Value="0" />
+									<DataValueMember Name="UN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[1]">
+								<Structure DataType="COUNTER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="CU" DataType="BOOL" Value="0" />
+									<DataValueMember Name="CD" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="OV" DataType="BOOL" Value="0" />
+									<DataValueMember Name="UN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[2]">
+								<Structure DataType="COUNTER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="CU" DataType="BOOL" Value="0" />
+									<DataValueMember Name="CD" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="OV" DataType="BOOL" Value="0" />
+									<DataValueMember Name="UN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[3]">
+								<Structure DataType="COUNTER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="CU" DataType="BOOL" Value="0" />
+									<DataValueMember Name="CD" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="OV" DataType="BOOL" Value="0" />
+									<DataValueMember Name="UN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[4]">
+								<Structure DataType="COUNTER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="CU" DataType="BOOL" Value="0" />
+									<DataValueMember Name="CD" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="OV" DataType="BOOL" Value="0" />
+									<DataValueMember Name="UN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+						</ArrayMember>
+						<DataValueMember Name="AutoMode" DataType="BOOL" Value="0" />
+						<DataValueMember Name="ManualMode" DataType="BOOL" Value="0" />
+					</Structure>
+				</Data>
+			</Tag>
+			<Tag Name="Mat_Roll_Transfer_Conveyor3" TagType="Base" DataType="UDT_Sequencer"
+				Constant="false" ExternalAccess="Read/Write">
+				<Comments>
+					<Comment Operand=".OUTPUT[0].0">
+<![CDATA[Waiting_For_Home]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].1">
+<![CDATA[Check_For_Mat_Present]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].2">
+<![CDATA[TC_01 Stopper_Up_Command]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].3">
+<![CDATA[Mat Ready_To_Recieve]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].4">
+<![CDATA[Mat_Receiving_in_Progress]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].5">
+<![CDATA[Mat_Receiving_Completed]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].6">
+<![CDATA[Mat_Ready_To_Send_to_TC_02]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].7">
+<![CDATA[TC_01 Stopper_Down_Command]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].8">
+<![CDATA[Mat_Sending_In_Progress]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].9">
+<![CDATA[Mat_Sending_Completed_to_TC02]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].10">
+<![CDATA[TC_01 Stopper_Up_Command]]>
+</Comment>
+					<Comment Operand=".OUTPUT[0].11">
+<![CDATA[Cycle_Completed]]>
+</Comment>
+				</Comments>
+				<Data Format="L5K">
+<![CDATA[[0,0,[0,0],[0,0],[[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0
+		],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0]],[[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0]],0]]]>
+</Data>
+				<Data Format="Decorated">
+					<Structure DataType="UDT_Sequencer">
+						<DataValueMember Name="Hold" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Continue" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Reset" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Interlocks" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Active" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Abort" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Step" DataType="DINT" Radix="Decimal" Value="0" />
+						<ArrayMember Name="Input" DataType="DINT" Dimensions="2" Radix="Decimal">
+							<Element Index="[0]" Value="0" />
+							<Element Index="[1]" Value="0" />
+						</ArrayMember>
+						<ArrayMember Name="Output" DataType="DINT" Dimensions="2" Radix="Decimal">
+							<Element Index="[0]" Value="0" />
+							<Element Index="[1]" Value="0" />
+						</ArrayMember>
+						<ArrayMember Name="Timer" DataType="TIMER" Dimensions="25">
+							<Element Index="[0]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[1]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[2]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[3]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[4]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[5]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[6]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[7]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[8]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[9]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[10]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[11]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[12]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[13]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[14]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[15]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[16]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[17]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[18]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[19]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[20]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[21]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[22]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[23]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[24]">
+								<Structure DataType="TIMER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="100" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="EN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="TT" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+						</ArrayMember>
+						<ArrayMember Name="Counter" DataType="COUNTER" Dimensions="5">
+							<Element Index="[0]">
+								<Structure DataType="COUNTER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="CU" DataType="BOOL" Value="0" />
+									<DataValueMember Name="CD" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="OV" DataType="BOOL" Value="0" />
+									<DataValueMember Name="UN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[1]">
+								<Structure DataType="COUNTER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="CU" DataType="BOOL" Value="0" />
+									<DataValueMember Name="CD" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="OV" DataType="BOOL" Value="0" />
+									<DataValueMember Name="UN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[2]">
+								<Structure DataType="COUNTER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="CU" DataType="BOOL" Value="0" />
+									<DataValueMember Name="CD" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="OV" DataType="BOOL" Value="0" />
+									<DataValueMember Name="UN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[3]">
+								<Structure DataType="COUNTER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="CU" DataType="BOOL" Value="0" />
+									<DataValueMember Name="CD" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="OV" DataType="BOOL" Value="0" />
+									<DataValueMember Name="UN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+							<Element Index="[4]">
+								<Structure DataType="COUNTER">
+									<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal"
+										Value="0" />
+									<DataValueMember Name="CU" DataType="BOOL" Value="0" />
+									<DataValueMember Name="CD" DataType="BOOL" Value="0" />
+									<DataValueMember Name="DN" DataType="BOOL" Value="0" />
+									<DataValueMember Name="OV" DataType="BOOL" Value="0" />
+									<DataValueMember Name="UN" DataType="BOOL" Value="0" />
+								</Structure>
+							</Element>
+						</ArrayMember>
+						<DataValueMember Name="AutoMode" DataType="BOOL" Value="0" />
+						<DataValueMember Name="ManualMode" DataType="BOOL" Value="0" />
+					</Structure>
+				</Data>
+			</Tag>
+			<Tag Name="Pallet_Machine" TagType="Base" DataType="UDT_Machine" Constant="false"
+				ExternalAccess="Read/Write">
+				<Data Format="L5K">
+<![CDATA[[3,0,4,0]]]>
+</Data>
+				<Data Format="Decorated">
+					<Structure DataType="UDT_Machine">
+						<DataValueMember Name="AutoModeSelect" DataType="BOOL" Value="1" />
+						<DataValueMember Name="AutoMode" DataType="BOOL" Value="1" />
+						<DataValueMember Name="ManualMode" DataType="BOOL" Value="0" />
+						<DataValueMember Name="AutoState" DataType="BOOL" Value="0" />
+						<DataValueMember Name="ManualState" DataType="BOOL" Value="0" />
+						<DataValueMember Name="AutoModeDisable" DataType="BOOL" Value="0" />
+						<DataValueMember Name="ManualModeDisable" DataType="BOOL" Value="0" />
+						<DataValueMember Name="InitRequired" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Enable" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Disable" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Start" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Stop" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Hold" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Continue" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Initialize" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Abort" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Reset_All_Sequence" DataType="BOOL" Value="0" />
+						<DataValueMember Name="FaultClear" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Healthy" DataType="BOOL" Value="1" />
+						<DataValueMember Name="Faulted" DataType="BOOL" Value="0" />
+						<DataValueMember Name="ManualLoading" DataType="BOOL" Value="0" />
+						<DataValueMember Name="AutoLoading" DataType="BOOL" Value="0" />
+						<DataValueMember Name="AxisResetDone" DataType="BOOL" Value="0" />
+						<DataValueMember Name="HomeDone" DataType="BOOL" Value="0" />
+						<DataValueMember Name="StartDone" DataType="BOOL" Value="0" />
+						<DataValueMember Name="StopDone" DataType="BOOL" Value="0" />
+						<DataValueMember Name="HoldDone" DataType="BOOL" Value="0" />
+						<DataValueMember Name="AbortDone" DataType="BOOL" Value="0" />
+						<DataValueMember Name="HMI_Line01Run" DataType="BOOL" Value="0" />
+						<DataValueMember Name="HMI_Line02Run" DataType="BOOL" Value="0" />
+						<DataValueMember Name="HMI_BothLineRunning" DataType="BOOL" Value="0" />
+						<DataValueMember Name="Reset_Selected_Sequence" DataType="BOOL" Value="0" />
+					</Structure>
+				</Data>
+			</Tag>
+			<Tag Name="Pending" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false"
+				ExternalAccess="Read/Write">
+				<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+				<Data Format="Decorated">
+					<DataValue DataType="BOOL" Radix="Decimal" Value="0" />
+				</Data>
+			</Tag>
+		</Tags>
+		<Programs>
+			<Program Name="MainProgram" TestEdits="false" MainRoutineName="MainRoutine"
+				Disabled="false" UseAsFolder="false">
+				<Tags />
+				<Routines>
+					<Routine Name="MainRoutine" Type="RLL" />
+				</Routines>
+			</Program>
+			<Program Name="StationLogic" TestEdits="false" Disabled="false" UseAsFolder="false">
+				<Tags />
+				<Routines>
+					<Routine Name="Mat_Roll_Transfer_Conveyor1" Type="RLL">
+						<RLLContent>
+							<Rung Number="0" Type="N">
+								<Text>
+<![CDATA[XIC(AlwaysOn)[XIC(Pallet_Machine.AutoMode) OTE(Mat_Roll_Transfer_Conveyor1.AutoMode) ,XIC(Pallet_Machine.ManualMode) OTE(Mat_Roll_Transfer_Conveyor1.ManualMode) ];]]>
+</Text>
+							</Rung>
+							<Rung Number="1" Type="N">
+								<Comment>
+<![CDATA[
+Pending for Confirmation 
+Sequence Interlocks
+]]>
+</Comment>
+								<Text>
+<![CDATA[XIO(Pallet_Machine.Faulted)OTE(Mat_Roll_Transfer_Conveyor1.Interlocks);]]>
+</Text>
+							</Rung>
+							<Rung Number="2" Type="N">
+								<Comment>
+<![CDATA[
+Sequence Hold
+]]>
+</Comment>
+								<Text>
+<![CDATA[[XIC(Pallet_Machine.Hold) ,XIO(Mat_Roll_Transfer_Conveyor1.Interlocks) ,XIC(Mat_Roll_Transfer_Conveyor1.Hold) ]XIC(Mat_Roll_Transfer_Conveyor1.Active)XIO(Mat_Roll_Transfer_Conveyor1.Continue)OTE(Mat_Roll_Transfer_Conveyor1.Hold);]]>
+</Text>
+							</Rung>
+							<Rung Number="3" Type="N">
+								<Text>
+<![CDATA[XIC(Mat_Roll_Transfer_Conveyor1.Continue)OTU(Mat_Roll_Transfer_Conveyor1.Continue);]]>
+</Text>
+							</Rung>
+							<Rung Number="4" Type="N">
+								<Comment>
+<![CDATA[
+Auto Sequence Is Active.
+]]>
+</Comment>
+								<Text>
+<![CDATA[XIC(Mat_Roll_Transfer_Conveyor1.AutoMode)NEQ(Mat_Roll_Transfer_Conveyor1.Step,0)OTE(Mat_Roll_Transfer_Conveyor1.Active);]]>
+</Text>
+							</Rung>
+							<Rung Number="5" Type="N">
+								<Text>
+<![CDATA[XIC(Mat_Roll_Transfer_Conveyor1.AutoMode)EQU(Mat_Roll_Transfer_Conveyor1.Step,0)XIO(Mat_Roll_Transfer_Conveyor1.Hold)[OTE(Mat_Roll_Transfer_Conveyor1.Output[0].0) ,XIC(DI01) XIC(AlwaysOn) XIC(AlwaysOn) XIC(AlwaysOn) TON(Mat_Roll_Transfer_Conveyor1.Timer[0],?,?) ,XIC(Mat_Roll_Transfer_Conveyor1.Timer[0].DN) MOV(10,Mat_Roll_Transfer_Conveyor1.Step) ];]]>
+</Text>
+							</Rung>
+							<Rung Number="6" Type="N">
+								<Text>
+<![CDATA[XIC(Mat_Roll_Transfer_Conveyor1.AutoMode)EQU(Mat_Roll_Transfer_Conveyor1.Step,10)XIO(Mat_Roll_Transfer_Conveyor1.Hold)[OTE(Mat_Roll_Transfer_Conveyor1.Output[0].1) ,XIC(DI02) XIC(AlwaysOn) XIC(AlwaysOn) XIC(AlwaysOn) TON(Mat_Roll_Transfer_Conveyor1.Timer[1],?,?) ,XIC(Mat_Roll_Transfer_Conveyor1.Timer[1].DN) MOV(20,Mat_Roll_Transfer_Conveyor1.Step) ];]]>
+</Text>
+							</Rung>
+							<Rung Number="7" Type="N">
+								<Text>
+<![CDATA[XIC(Mat_Roll_Transfer_Conveyor1.AutoMode)EQU(Mat_Roll_Transfer_Conveyor1.Step,20)XIO(Mat_Roll_Transfer_Conveyor1.Hold)[OTE(Mat_Roll_Transfer_Conveyor1.Output[0].2) ,XIC(DI03) XIC(AlwaysOn) XIC(AlwaysOn) XIC(AlwaysOn) TON(Mat_Roll_Transfer_Conveyor1.Timer[2],?,?) ,XIC(Mat_Roll_Transfer_Conveyor1.Timer[2].DN) MOV(30,Mat_Roll_Transfer_Conveyor1.Step) ];]]>
+</Text>
+							</Rung>
+							<Rung Number="8" Type="N">
+								<Text>
+<![CDATA[XIC(Mat_Roll_Transfer_Conveyor1.AutoMode)EQU(Mat_Roll_Transfer_Conveyor1.Step,30)XIO(Mat_Roll_Transfer_Conveyor1.Hold)[OTE(Mat_Roll_Transfer_Conveyor1.Output[0].3) ,XIC(DI04) XIC(AlwaysOn) XIC(AlwaysOn) XIC(AlwaysOn) TON(Mat_Roll_Transfer_Conveyor1.Timer[3],?,?) ,XIC(Mat_Roll_Transfer_Conveyor1.Timer[3].DN) MOV(40,Mat_Roll_Transfer_Conveyor1.Step) ];]]>
+</Text>
+							</Rung>
+							<Rung Number="9" Type="N">
+								<Text>
+<![CDATA[XIC(Mat_Roll_Transfer_Conveyor1.AutoMode)EQU(Mat_Roll_Transfer_Conveyor1.Step,40)XIO(Mat_Roll_Transfer_Conveyor1.Hold)[OTE(Mat_Roll_Transfer_Conveyor1.Output[0].4) ,XIC(DI05) XIC(AlwaysOn) XIC(AlwaysOn) XIC(AlwaysOn) TON(Mat_Roll_Transfer_Conveyor1.Timer[4],?,?) ,XIC(Mat_Roll_Transfer_Conveyor1.Timer[4].DN) MOV(50,Mat_Roll_Transfer_Conveyor1.Step) ];]]>
+</Text>
+							</Rung>
+							<Rung Number="10" Type="N">
+								<Text>
+<![CDATA[XIC(Mat_Roll_Transfer_Conveyor1.AutoMode)EQU(Mat_Roll_Transfer_Conveyor1.Step,50)XIO(Mat_Roll_Transfer_Conveyor1.Hold)[OTE(Mat_Roll_Transfer_Conveyor1.Output[0].5) ,XIC(DI06) XIC(AlwaysOn) XIC(AlwaysOn) XIC(AlwaysOn) TON(Mat_Roll_Transfer_Conveyor1.Timer[5],?,?) ,XIC(Mat_Roll_Transfer_Conveyor1.Timer[5].DN) MOV(60,Mat_Roll_Transfer_Conveyor1.Step) ];]]>
+</Text>
+							</Rung>
+							<Rung Number="11" Type="N">
+								<Text>
+<![CDATA[XIC(Mat_Roll_Transfer_Conveyor1.AutoMode)EQU(Mat_Roll_Transfer_Conveyor1.Step,60)XIO(Mat_Roll_Transfer_Conveyor1.Hold)[OTE(Mat_Roll_Transfer_Conveyor1.Output[0].6) ,XIC(DI06) XIC(AlwaysOn) XIC(AlwaysOn) XIC(AlwaysOn) TON(Mat_Roll_Transfer_Conveyor1.Timer[6],?,?) ,XIC(Mat_Roll_Transfer_Conveyor1.Timer[6].DN) MOV(70,Mat_Roll_Transfer_Conveyor1.Step) ];]]>
+</Text>
+							</Rung>
+							<Rung Number="12" Type="N">
+								<Text>
+<![CDATA[XIC(Mat_Roll_Transfer_Conveyor1.AutoMode)EQU(Mat_Roll_Transfer_Conveyor1.Step,70)XIO(Mat_Roll_Transfer_Conveyor1.Hold)[OTE(Mat_Roll_Transfer_Conveyor1.Output[0].7) ,XIC(DI07) XIC(AlwaysOn) XIC(AlwaysOn) XIC(AlwaysOn) TON(Mat_Roll_Transfer_Conveyor1.Timer[7],?,?) ,XIC(Mat_Roll_Transfer_Conveyor1.Timer[7].DN) MOV(80,Mat_Roll_Transfer_Conveyor1.Step) ];]]>
+</Text>
+							</Rung>
+							<Rung Number="13" Type="N">
+								<Text>
+<![CDATA[XIC(Mat_Roll_Transfer_Conveyor1.AutoMode)EQU(Mat_Roll_Transfer_Conveyor1.Step,80)XIO(Mat_Roll_Transfer_Conveyor1.Hold)[OTE(Mat_Roll_Transfer_Conveyor1.Output[0].8) ,XIC(DI08) XIC(AlwaysOn) XIC(AlwaysOn) XIC(AlwaysOn) TON(Mat_Roll_Transfer_Conveyor1.Timer[8],?,?) ,XIC(Mat_Roll_Transfer_Conveyor1.Timer[8].DN) MOV(90,Mat_Roll_Transfer_Conveyor1.Step) ];]]>
+</Text>
+							</Rung>
+							<Rung Number="14" Type="N">
+								<Text>
+<![CDATA[XIC(Mat_Roll_Transfer_Conveyor1.AutoMode)EQU(Mat_Roll_Transfer_Conveyor1.Step,90)XIO(Mat_Roll_Transfer_Conveyor1.Hold)[OTE(Mat_Roll_Transfer_Conveyor1.Output[0].9) ,XIC(DI09) XIC(AlwaysOn) XIC(AlwaysOn) XIC(AlwaysOn) TON(Mat_Roll_Transfer_Conveyor1.Timer[9],?,?) ,XIC(Mat_Roll_Transfer_Conveyor1.Timer[9].DN) MOV(100,Mat_Roll_Transfer_Conveyor1.Step) ];]]>
+</Text>
+							</Rung>
+							<Rung Number="15" Type="N">
+								<Text>
+<![CDATA[XIC(Mat_Roll_Transfer_Conveyor1.AutoMode)EQU(Mat_Roll_Transfer_Conveyor1.Step,100)XIO(Mat_Roll_Transfer_Conveyor1.Hold)[OTE(Mat_Roll_Transfer_Conveyor1.Output[0].10) ,XIC(DI10) XIC(AlwaysOn) XIC(AlwaysOn) XIC(AlwaysOn) TON(Mat_Roll_Transfer_Conveyor1.Timer[10],?,?) ,XIC(Mat_Roll_Transfer_Conveyor1.Timer[10].DN) MOV(110,Mat_Roll_Transfer_Conveyor1.Step) ];]]>
+</Text>
+							</Rung>
+							<Rung Number="16" Type="N">
+								<Text>
+<![CDATA[XIC(Mat_Roll_Transfer_Conveyor1.AutoMode)EQU(Mat_Roll_Transfer_Conveyor1.Step,110)XIO(Mat_Roll_Transfer_Conveyor1.Hold)[OTE(Mat_Roll_Transfer_Conveyor1.Output[0].11) ,XIC(DI11) XIC(AlwaysOn) XIC(AlwaysOn) XIC(AlwaysOn) TON(Mat_Roll_Transfer_Conveyor1.Timer[11],?,?) ,XIC(Mat_Roll_Transfer_Conveyor1.Timer[11].DN) MOV(0,Mat_Roll_Transfer_Conveyor1.Step) ];]]>
+</Text>
+							</Rung>
+						</RLLContent>
+					</Routine>
+				</Routines>
+			</Program>
+		</Programs>
+		<Tasks>
+			<Task Name="MainTask" Type="CONTINUOUS" Priority="10" Watchdog="500"
+				DisableUpdateOutputs="false" InhibitTask="false">
+				<ScheduledPrograms>
+					<ScheduledProgram Name="MainProgram" />
+					<ScheduledProgram Name="StationLogic" />
+				</ScheduledPrograms>
+			</Task>
+		</Tasks>
+		<CST MasterID="0" />
+		<WallClockTime LocalTimeAdjustment="0" TimeZone="0" />
+		<Trends />
+		<DataLogs />
+		<TimeSynchronize Priority1="128" Priority2="128" PTPEnable="false" />
+		<EthernetPorts>
+			<EthernetPort Port="1" Label="1" PortEnabled="true" />
+			<EthernetPort Port="2" Label="2" PortEnabled="true" />
+		</EthernetPorts>
+		<EthernetNetwork SupervisorModeEnabled="false" SupervisorPrecedence="0" BeaconInterval="400"
+			BeaconTimeout="1960" VLANID="0" />
+	</Controller>
+</RSLogix5000Content>

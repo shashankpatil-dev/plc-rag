@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="33.00" TargetName="FB09_Sequence_Reset" TargetType="AddOnInstructionDefinition" TargetClass="Standard" TargetRevision="1.0 " TargetLastEdited="2026-01-01T11:38:09.812Z" ContainsContext="true" ExportDate="Sun Feb 01 10:18:26 2026" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="VAPR112_Bozeman">
+<DataTypes Use="Context">
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Use="Target" Name="FB09_Sequence_Reset" Class="Standard" Revision="1.0" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2025-10-30T09:12:29.587Z" CreatedBy="DipakU-Dell3591\Dipak" EditedDate="2026-01-01T11:38:09.812Z" EditedBy="MAHESH-PRECISSI\Mahesh"
+ SoftwareRevision="v33.00">
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="In_Seq_Reset_Interlock" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="In_AllSeqReset" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="In_SelSeqReset" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="In_Seq_Reset_01" TagType="Base" DataType="BOOL" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Out_Seq_Step_01" TagType="Base" DataType="DINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="In_Seq_Reset_02" TagType="Base" DataType="BOOL" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Out_Seq_Step_02" TagType="Base" DataType="DINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="In_Seq_Reset_03" TagType="Base" DataType="BOOL" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Out_Seq_Step_03" TagType="Base" DataType="DINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="In_Seq_Reset_04" TagType="Base" DataType="BOOL" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Out_Seq_Step_04" TagType="Base" DataType="DINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="In_Seq_Reset_05" TagType="Base" DataType="BOOL" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Out_Seq_Step_05" TagType="Base" DataType="DINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="In_Seq_Reset_06" TagType="Base" DataType="BOOL" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Out_Seq_Step_06" TagType="Base" DataType="DINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="In_Seq_Reset_07" TagType="Base" DataType="BOOL" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Out_Seq_Step_07" TagType="Base" DataType="DINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="In_Seq_Reset_08" TagType="Base" DataType="BOOL" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Out_Seq_Step_08" TagType="Base" DataType="DINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="In_Seq_Reset_09" TagType="Base" DataType="BOOL" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Out_Seq_Step_09" TagType="Base" DataType="DINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="In_Seq_Reset_10" TagType="Base" DataType="BOOL" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Out_Seq_Step_10" TagType="Base" DataType="DINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="In_Seq_Reset_11" TagType="Base" DataType="BOOL" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Out_Seq_Step_11" TagType="Base" DataType="DINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="In_Seq_Reset_12" TagType="Base" DataType="BOOL" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Out_Seq_Step_12" TagType="Base" DataType="DINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="In_Seq_Reset_13" TagType="Base" DataType="BOOL" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Out_Seq_Step_13" TagType="Base" DataType="DINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="In_Seq_Reset_14" TagType="Base" DataType="BOOL" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Out_Seq_Step_14" TagType="Base" DataType="DINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="In_Seq_Reset_15" TagType="Base" DataType="BOOL" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Out_Seq_Step_15" TagType="Base" DataType="DINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="In_Seq_Reset_16" TagType="Base" DataType="BOOL" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Out_Seq_Step_16" TagType="Base" DataType="DINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="In_Seq_Reset_17" TagType="Base" DataType="BOOL" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Out_Seq_Step_17" TagType="Base" DataType="DINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="In_Seq_Reset_18" TagType="Base" DataType="BOOL" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Out_Seq_Step_18" TagType="Base" DataType="DINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="In_Seq_Reset_19" TagType="Base" DataType="BOOL" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Out_Seq_Step_19" TagType="Base" DataType="DINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="In_Seq_Reset_20" TagType="Base" DataType="BOOL" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="Out_Seq_Step_20" TagType="Base" DataType="DINT" Usage="InOut" Radix="Decimal" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="All_Seq_Reset_Feeback" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="SeqResetTimer" DataType="TIMER" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[[0,1000,0]]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="1000"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="RLL">
+<RLLContent>
+<Rung Number="0" Type="N">
+<Comment>
+<![CDATA[///////////////////////////////////////////////////////////////////////
+Sequence Reset
+///////////////////////////////////////////////////////////////////////]]>
+</Comment>
+<Text>
+<![CDATA[XIC(In_Seq_Reset_Interlock)[[XIC(In_AllSeqReset) ,XIC(In_SelSeqReset) ] TON(SeqResetTimer,?,?) ,[XIC(In_AllSeqReset) ,XIC(In_SelSeqReset) XIC(In_Seq_Reset_01) ] XIC(SeqResetTimer.DN) MOV(1,Out_Seq_Step_01) OTU(In_Seq_Reset_01) ,[XIC(In_AllSeqReset) ,XIC(In_SelSeqReset) XIC(In_Seq_Reset_02) ] XIC(SeqResetTimer.DN) MOV(1,Out_Seq_Step_02) OTU(In_Seq_Reset_02) ,[XIC(In_AllSeqReset) ,XIC(In_SelSeqReset) XIC(In_Seq_Reset_03) ] XIC(SeqResetTimer.DN) MOV(1,Out_Seq_Step_03) OTU(In_Seq_Reset_03) ,[XIC(In_AllSeqReset) ,XIC(In_SelSeqReset) XIC(In_Seq_Reset_04) ] XIC(SeqResetTimer.DN) MOV(1,Out_Seq_Step_04) OTU(In_Seq_Reset_04) ,[XIC(In_AllSeqReset) ,XIC(In_SelSeqReset) XIC(In_Seq_Reset_05) ] XIC(SeqResetTimer.DN) MOV(1,Out_Seq_Step_05) OTU(In_Seq_Reset_05) ,[XIC(In_AllSeqReset) ,XIC(In_SelSeqReset) XIC(In_Seq_Reset_06) ] XIC(SeqResetTimer.DN) MOV(1,Out_Seq_Step_06) OTU(In_Seq_Reset_06) ,[XIC(In_AllSeqReset) ,XIC(In_SelSeqReset) XIC(In_Seq_Reset_07) ] XIC(SeqResetTimer.DN) MOV(1,Out_Seq_Step_07) OTU(In_Seq_Reset_07) ,[XIC(In_AllSeqReset) ,XIC(In_SelSeqReset) XIC(In_Seq_Reset_08) ] XIC(SeqResetTimer.DN) MOV(1,Out_Seq_Step_08) OTU(In_Seq_Reset_08) ,[XIC(In_AllSeqReset) ,XIC(In_SelSeqReset) XIC(In_Seq_Reset_09) ] XIC(SeqResetTimer.DN) MOV(1,Out_Seq_Step_09) OTU(In_Seq_Reset_09) ,[XIC(In_AllSeqReset) ,XIC(In_SelSeqReset) XIC(In_Seq_Reset_10) ] XIC(SeqResetTimer.DN) MOV(1,Out_Seq_Step_10) OTU(In_Seq_Reset_10) ,[XIC(In_AllSeqReset) ,XIC(In_SelSeqReset) XIC(In_Seq_Reset_11) ] XIC(SeqResetTimer.DN) MOV(1,Out_Seq_Step_11) OTU(In_Seq_Reset_11) ,[XIC(In_AllSeqReset) ,XIC(In_SelSeqReset) XIC(In_Seq_Reset_12) ] XIC(SeqResetTimer.DN) MOV(1,Out_Seq_Step_12) OTU(In_Seq_Reset_12) ,[XIC(In_AllSeqReset) ,XIC(In_SelSeqReset) XIC(In_Seq_Reset_13) ] XIC(SeqResetTimer.DN) MOV(1,Out_Seq_Step_13) OTU(In_Seq_Reset_13) ,[XIC(In_AllSeqReset) ,XIC(In_SelSeqReset) XIC(In_Seq_Reset_14) ] XIC(SeqResetTimer.DN) MOV(1,Out_Seq_Step_14) OTU(In_Seq_Reset_14) ,[XIC(In_AllSeqReset) ,XIC(In_SelSeqReset) XIC(In_Seq_Reset_15) ] XIC(SeqResetTimer.DN) MOV(1,Out_Seq_Step_15) OTU(In_Seq_Reset_15) ,[XIC(In_AllSeqReset) ,XIC(In_SelSeqReset) XIC(In_Seq_Reset_16) ] XIC(SeqResetTimer.DN) MOV(1,Out_Seq_Step_16) OTU(In_Seq_Reset_16) ,[XIC(In_AllSeqReset) ,XIC(In_SelSeqReset) XIC(In_Seq_Reset_17) ] XIC(SeqResetTimer.DN) MOV(1,Out_Seq_Step_17) OTU(In_Seq_Reset_17) ,[XIC(In_AllSeqReset) ,XIC(In_SelSeqReset) XIC(In_Seq_Reset_18) ] XIC(SeqResetTimer.DN) MOV(1,Out_Seq_Step_18) OTU(In_Seq_Reset_18) ,[XIC(In_AllSeqReset) ,XIC(In_SelSeqReset) XIC(In_Seq_Reset_19) ] XIC(SeqResetTimer.DN) MOV(1,Out_Seq_Step_19) OTU(In_Seq_Reset_19) ,[XIC(In_AllSeqReset) ,XIC(In_SelSeqReset) XIC(In_Seq_Reset_20) ] XIC(SeqResetTimer.DN) MOV(1,Out_Seq_Step_20) OTU(In_Seq_Reset_20) ,XIC(SeqResetTimer.DN) OTU(In_AllSeqReset) ];]]>
+</Text>
+</Rung>
+<Rung Number="1" Type="N">
+<Comment>
+<![CDATA[///////////////////////////////////////////////////////////////////////
+All Sequence Reset Feedback
+///////////////////////////////////////////////////////////////////////]]>
+</Comment>
+<Text>
+<![CDATA[EQU(Out_Seq_Step_01,1)EQU(Out_Seq_Step_02,1)EQU(Out_Seq_Step_03,1)EQU(Out_Seq_Step_04,1)EQU(Out_Seq_Step_05,1)EQU(Out_Seq_Step_06,1)EQU(Out_Seq_Step_07,1)EQU(Out_Seq_Step_08,1)EQU(Out_Seq_Step_09,1)EQU(Out_Seq_Step_10,1)EQU(Out_Seq_Step_11,1)EQU(Out_Seq_Step_12,1)EQU(Out_Seq_Step_13,1)EQU(Out_Seq_Step_14,1)EQU(Out_Seq_Step_15,1)EQU(Out_Seq_Step_16,1)EQU(Out_Seq_Step_17,1)EQU(Out_Seq_Step_18,1)EQU(Out_Seq_Step_19,1)EQU(Out_Seq_Step_20,1)OTE(All_Seq_Reset_Feeback);]]>
+</Text>
+</Rung>
+</RLLContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>

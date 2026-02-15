@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Bash(source:*)",
+      "Bash(pip install:*)",
+      "Bash(python:*)",
+      "Bash(chmod:*)",
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(npm install)",
+      "Bash(npm install:*)",
+      "Bash(deactivate)",
+      "Bash(pytest:*)",
+      "Bash(ls:*)",
+      "Bash(curl:*)",
+      "Bash(tree:*)",
+      "Bash(npx shadcn-ui@latest init --yes --defaults)",
+      "Bash(npx shadcn@latest init)",
+      "Bash(npx shadcn@latest add button card badge separator input select checkbox textarea table tabs dialog toast progress skeleton scroll-area dropdown-menu --overwrite --yes)",
+      "Bash(lsof:*)",
+      "Bash(xargs kill:*)",
+      "Bash(npm run dev:*)",
+      "Bash(./start_system.sh:*)",
+      "Bash(./stop_system.sh:*)",
+      "Bash(pkill:*)"
+    ]
+  }
+}

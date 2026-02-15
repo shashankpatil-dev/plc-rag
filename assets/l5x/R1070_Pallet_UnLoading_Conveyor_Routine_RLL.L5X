@@ -1,0 +1,1158 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="33.00" TargetName="R1070_Pallet_UnLoading_Conveyor" TargetType="Routine" TargetSubType="RLL" TargetClass="Standard" ContainsContext="true" ExportDate="Sun Feb 01 10:20:16 2026" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans LogicalHierarchy">
+<Controller Use="Context" Name="VAPR112_Bozeman">
+<DataTypes Use="Context">
+<DataType Name="UDT_Machine" Family="NoFamily" Class="User">
+<Members>
+<Member Name="ZZZZZZZZZZUDT_Machin0" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="HMI_Auto_Start" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin0" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[HMI_Auto_Start]]>
+</Description>
+</Member>
+<Member Name="HMI_Auto_Stop" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin0" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[HMI_Auto_Stop]]>
+</Description>
+</Member>
+<Member Name="HMI_Auto_Mode_Select" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin0" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[HMI_Auto_Mode_Select]]>
+</Description>
+</Member>
+<Member Name="Auto_Mode_Selected" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin0" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Auto mode selection from HMI]]>
+</Description>
+</Member>
+<Member Name="AutoMode" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin0" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Auto Mode Running]]>
+</Description>
+</Member>
+<Member Name="ManualMode" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin0" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Manual Mode Running]]>
+</Description>
+</Member>
+<Member Name="Machine_Start_Timer" DataType="TIMER" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Machine_Start_Timer]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZUDT_Machin8" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Hold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin8" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Hold Auto Run]]>
+</Description>
+</Member>
+<Member Name="Continue" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin8" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Continue Auto Run After Hold]]>
+</Description>
+</Member>
+<Member Name="Abort" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin8" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Abort Current Move]]>
+</Description>
+</Member>
+<Member Name="SelSeqReset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin8" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Selected Sequence Reset]]>
+</Description>
+</Member>
+<Member Name="AllSeqReset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin8" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Reset All Sequencing]]>
+</Description>
+</Member>
+<Member Name="All_Seq_Reset_Feeback" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin8" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[All_Seq_Reset_Feeback]]>
+</Description>
+</Member>
+<Member Name="FaultClear" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin8" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Clear Faults]]>
+</Description>
+</Member>
+<Member Name="Healthy" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin8" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[All Faults Clear]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZUDT_Machin17" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Faulted" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin17" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[A Fault Is Present]]>
+</Description>
+</Member>
+<Member Name="AutoState" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin17" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Active Sequence]]>
+</Description>
+</Member>
+<Member Name="HMI_BuzzerSilence" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin17" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Buzzer Silence Button]]>
+</Description>
+</Member>
+<Member Name="MasterHome" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin17" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[MasterHome]]>
+</Description>
+</Member>
+<Member Name="HMI_Reset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin17" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[HMI_Reset]]>
+</Description>
+</Member>
+<Member Name="SeqResetTimer" DataType="TIMER" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[SeqResetTimer]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZUDT_Machin24" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="ProductionDataReset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin24" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Reset Production Data]]>
+</Description>
+</Member>
+<Member Name="RuntimeDataReset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin24" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Reset Runtime Data]]>
+</Description>
+</Member>
+<Member Name="All_Safety_Healthy" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin24" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[All_Safety_Healthy]]>
+</Description>
+</Member>
+<Member Name="All_Network_Healthy" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin24" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[All_Network_Healthy]]>
+</Description>
+</Member>
+<Member Name="All_MPCB_Healthy" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin24" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[All_MPCB_Healthy]]>
+</Description>
+</Member>
+<Member Name="All_E_Stop_Healthy" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin24" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[All_E_Stop_Healthy]]>
+</Description>
+</Member>
+<Member Name="All_Door_Healthy" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin24" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[All_Door_Healthy]]>
+</Description>
+</Member>
+<Member Name="Safety_Bypass" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin24" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Safety_Bypass]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZUDT_Machin33" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Safety_Break" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin33" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Safety_Break]]>
+</Description>
+</Member>
+<Member Name="Air_Pressure_Timer" DataType="TIMER" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Air_Pressure_Timer]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZUDT_Machin36" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Air_Pressure_Ok_FB" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin36" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Air_Pressure_Ok_FB]]>
+</Description>
+</Member>
+<Member Name="Pulse_One_Sec_On_Off" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin36" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[One_Sec_OnOff_Bit]]>
+</Description>
+</Member>
+<Member Name="Pulse_500ms_On_Off_Bit" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin36" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Pulse_500ms_On_Off_Bit]]>
+</Description>
+</Member>
+<Member Name="Pulse_250ms_On_Off_Bit" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin36" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Pulse_250ms_On_Off_Bit]]>
+</Description>
+</Member>
+<Member Name="Machine_Warning" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Machin36" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Machine_Warning]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="UDT_Sequencer" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[Sequence]]>
+</Description>
+<Members>
+<Member Name="ZZZZZZZZZZUDT_Sequen0" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Hold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Sequen0" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Hold]]>
+</Description>
+</Member>
+<Member Name="Continue" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Sequen0" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Continue]]>
+</Description>
+</Member>
+<Member Name="Reset" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Sequen0" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Reset]]>
+</Description>
+</Member>
+<Member Name="Interlocks" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Sequen0" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Interlocks]]>
+</Description>
+</Member>
+<Member Name="Active" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Sequen0" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Active]]>
+</Description>
+</Member>
+<Member Name="Abort" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Sequen0" BitNumber="5" ExternalAccess="Read/Write"/>
+<Member Name="Step" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Step]]>
+</Description>
+</Member>
+<Member Name="Input" DataType="DINT" Dimension="2" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Control Inputs]]>
+</Description>
+</Member>
+<Member Name="Output" DataType="DINT" Dimension="2" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Control Outputs]]>
+</Description>
+</Member>
+<Member Name="Timer" DataType="TIMER" Dimension="25" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Timers]]>
+</Description>
+</Member>
+<Member Name="Counter" DataType="COUNTER" Dimension="5" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Counters]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZUDT_Sequen12" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="AutoMode" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Sequen12" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Auto Mode]]>
+</Description>
+</Member>
+<Member Name="ManualMode" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZUDT_Sequen12" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Manual Mode]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+<Tags Use="Context">
+<Tag Name="AlwaysOn" Class="Standard" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="BPLC01" Class="Standard" TagType="Base" DataType="UDT_Sequencer" Constant="false" ExternalAccess="Read/Write">
+<Comments>
+<Comment Operand=".OUTPUT[0].0">
+<![CDATA[Waiting for Home Condition]]>
+</Comment>
+<Comment Operand=".OUTPUT[0].1">
+<![CDATA[Pallet Present]]>
+</Comment>
+<Comment Operand=".OUTPUT[0].2">
+<![CDATA[First Box Present]]>
+</Comment>
+<Comment Operand=".OUTPUT[0].3">
+<![CDATA[Pallet Stopper Up]]>
+</Comment>
+<Comment Operand=".OUTPUT[0].4">
+<![CDATA[Ready to Pallet Place Signal to Robot]]>
+</Comment>
+<Comment Operand=".OUTPUT[0].5">
+<![CDATA[Waiting For Robot Pallet Place]]>
+</Comment>
+<Comment Operand=".OUTPUT[0].6">
+<![CDATA[Referencing Forward]]>
+</Comment>
+<Comment Operand=".OUTPUT[0].7">
+<![CDATA[Ready to Bag Place Signal to Robot]]>
+</Comment>
+<Comment Operand=".OUTPUT[0].8">
+<![CDATA[Waiting For Placing Complete Signal]]>
+</Comment>
+<Comment Operand=".OUTPUT[0].9">
+<![CDATA[Referencing Reverse]]>
+</Comment>
+<Comment Operand=".OUTPUT[0].10">
+<![CDATA[Stopper Down]]>
+</Comment>
+<Comment Operand=".OUTPUT[0].11">
+<![CDATA[Ready To Send Signal To Next Conveyor]]>
+</Comment>
+<Comment Operand=".OUTPUT[0].12">
+<![CDATA[Sending In Progress]]>
+</Comment>
+<Comment Operand=".OUTPUT[0].13">
+<![CDATA[Cycle Completed]]>
+</Comment>
+</Comments>
+<Data Format="L5K">
+<![CDATA[[0,0,[0,0],[0,0],[[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,10,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,1000,0],[0,100,0
+		],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0]],[[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0]],0]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="UDT_Sequencer">
+<DataValueMember Name="Hold" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Continue" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Interlocks" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Active" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Abort" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Step" DataType="DINT" Radix="Decimal" Value="0"/>
+<ArrayMember Name="Input" DataType="DINT" Dimensions="2" Radix="Decimal">
+<Element Index="[0]" Value="0"/>
+<Element Index="[1]" Value="0"/>
+</ArrayMember>
+<ArrayMember Name="Output" DataType="DINT" Dimensions="2" Radix="Decimal">
+<Element Index="[0]" Value="0"/>
+<Element Index="[1]" Value="0"/>
+</ArrayMember>
+<ArrayMember Name="Timer" DataType="TIMER" Dimensions="25">
+<Element Index="[0]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[1]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[2]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[3]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[4]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="10"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[5]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[6]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[7]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[8]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[9]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[10]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[11]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[12]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[13]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="1000"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[14]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[15]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[16]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[17]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[18]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[19]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[20]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[21]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[22]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[23]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[24]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+</ArrayMember>
+<ArrayMember Name="Counter" DataType="COUNTER" Dimensions="5">
+<Element Index="[0]">
+<Structure DataType="COUNTER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="CU" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CD" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OV" DataType="BOOL" Value="0"/>
+<DataValueMember Name="UN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[1]">
+<Structure DataType="COUNTER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="CU" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CD" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OV" DataType="BOOL" Value="0"/>
+<DataValueMember Name="UN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[2]">
+<Structure DataType="COUNTER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="CU" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CD" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OV" DataType="BOOL" Value="0"/>
+<DataValueMember Name="UN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[3]">
+<Structure DataType="COUNTER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="CU" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CD" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OV" DataType="BOOL" Value="0"/>
+<DataValueMember Name="UN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[4]">
+<Structure DataType="COUNTER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="CU" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CD" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OV" DataType="BOOL" Value="0"/>
+<DataValueMember Name="UN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+</ArrayMember>
+<DataValueMember Name="AutoMode" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ManualMode" DataType="BOOL" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="DI14" Class="Standard" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DI14_Pallet UnLoading Conveyor Trip Healthy]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="DI51" Class="Standard" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DI51_Pallet UnLoading Conveyor Entry Sensor]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="DI52" Class="Standard" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[DI52_Pallet UnLoading Conveyor Exit Sensor]]>
+</Description>
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="Machine" Class="Standard" TagType="Base" DataType="UDT_Machine" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[[19,[0,0,0],-128,0,[0,0,0],0,0,[0,0,0],0]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="UDT_Machine">
+<DataValueMember Name="HMI_Auto_Start" DataType="BOOL" Value="1"/>
+<DataValueMember Name="HMI_Auto_Stop" DataType="BOOL" Value="1"/>
+<DataValueMember Name="HMI_Auto_Mode_Select" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Auto_Mode_Selected" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AutoMode" DataType="BOOL" Value="1"/>
+<DataValueMember Name="ManualMode" DataType="BOOL" Value="0"/>
+<StructureMember Name="Machine_Start_Timer" DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</StructureMember>
+<DataValueMember Name="Hold" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Continue" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Abort" DataType="BOOL" Value="0"/>
+<DataValueMember Name="SelSeqReset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AllSeqReset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="All_Seq_Reset_Feeback" DataType="BOOL" Value="0"/>
+<DataValueMember Name="FaultClear" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Healthy" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Faulted" DataType="BOOL" Value="0"/>
+<DataValueMember Name="AutoState" DataType="BOOL" Value="0"/>
+<DataValueMember Name="HMI_BuzzerSilence" DataType="BOOL" Value="0"/>
+<DataValueMember Name="MasterHome" DataType="BOOL" Value="0"/>
+<DataValueMember Name="HMI_Reset" DataType="BOOL" Value="0"/>
+<StructureMember Name="SeqResetTimer" DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</StructureMember>
+<DataValueMember Name="ProductionDataReset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="RuntimeDataReset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="All_Safety_Healthy" DataType="BOOL" Value="0"/>
+<DataValueMember Name="All_Network_Healthy" DataType="BOOL" Value="0"/>
+<DataValueMember Name="All_MPCB_Healthy" DataType="BOOL" Value="0"/>
+<DataValueMember Name="All_E_Stop_Healthy" DataType="BOOL" Value="0"/>
+<DataValueMember Name="All_Door_Healthy" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Safety_Bypass" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Safety_Break" DataType="BOOL" Value="0"/>
+<StructureMember Name="Air_Pressure_Timer" DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</StructureMember>
+<DataValueMember Name="Air_Pressure_Ok_FB" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Pulse_One_Sec_On_Off" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Pulse_500ms_On_Off_Bit" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Pulse_250ms_On_Off_Bit" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Machine_Warning" DataType="BOOL" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="Pending" Class="Standard" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data Format="L5K">
+<![CDATA[0]]>
+</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="PUC01" Class="Standard" TagType="Base" DataType="UDT_Sequencer" Constant="false" ExternalAccess="Read/Write">
+<Comments>
+<Comment Operand=".OUTPUT[0].0">
+<![CDATA[Waiting for Home Condition]]>
+</Comment>
+<Comment Operand=".OUTPUT[0].1">
+<![CDATA[Pallet Present]]>
+</Comment>
+<Comment Operand=".OUTPUT[0].2">
+<![CDATA[Ready to Receive]]>
+</Comment>
+<Comment Operand=".OUTPUT[0].3">
+<![CDATA[Receiving In Progress]]>
+</Comment>
+<Comment Operand=".OUTPUT[0].4">
+<![CDATA[Receiving Completed]]>
+</Comment>
+<Comment Operand=".OUTPUT[0].5">
+<![CDATA[Ready to Unload Pallet]]>
+</Comment>
+<Comment Operand=".OUTPUT[0].6">
+<![CDATA[Pallet Unloading Completed]]>
+</Comment>
+<Comment Operand=".OUTPUT[0].7">
+<![CDATA[Cycle Completed]]>
+</Comment>
+</Comments>
+<Data Format="L5K">
+<![CDATA[[0,0,[0,0],[0,0],[[0,100,0],[0,100,0],[0,100,0],[0,1000,0],[0,100,0],[0,100,0],[0,5000,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100
+		,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,100,0],[0,0,0],[0,100,0],[0,100,0],[0,100,0]],[[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0]],0]]]>
+</Data>
+<Data Format="Decorated">
+<Structure DataType="UDT_Sequencer">
+<DataValueMember Name="Hold" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Continue" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Interlocks" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Active" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Abort" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Step" DataType="DINT" Radix="Decimal" Value="0"/>
+<ArrayMember Name="Input" DataType="DINT" Dimensions="2" Radix="Decimal">
+<Element Index="[0]" Value="0"/>
+<Element Index="[1]" Value="0"/>
+</ArrayMember>
+<ArrayMember Name="Output" DataType="DINT" Dimensions="2" Radix="Decimal">
+<Element Index="[0]" Value="0"/>
+<Element Index="[1]" Value="0"/>
+</ArrayMember>
+<ArrayMember Name="Timer" DataType="TIMER" Dimensions="25">
+<Element Index="[0]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[1]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[2]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[3]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="1000"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[4]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[5]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[6]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="5000"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[7]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[8]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[9]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[10]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[11]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[12]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[13]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[14]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[15]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[16]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[17]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[18]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[19]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[20]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[21]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[22]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[23]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[24]">
+<Structure DataType="TIMER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="100"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+</ArrayMember>
+<ArrayMember Name="Counter" DataType="COUNTER" Dimensions="5">
+<Element Index="[0]">
+<Structure DataType="COUNTER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="CU" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CD" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OV" DataType="BOOL" Value="0"/>
+<DataValueMember Name="UN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[1]">
+<Structure DataType="COUNTER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="CU" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CD" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OV" DataType="BOOL" Value="0"/>
+<DataValueMember Name="UN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[2]">
+<Structure DataType="COUNTER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="CU" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CD" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OV" DataType="BOOL" Value="0"/>
+<DataValueMember Name="UN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[3]">
+<Structure DataType="COUNTER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="CU" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CD" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OV" DataType="BOOL" Value="0"/>
+<DataValueMember Name="UN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+<Element Index="[4]">
+<Structure DataType="COUNTER">
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="CU" DataType="BOOL" Value="0"/>
+<DataValueMember Name="CD" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="OV" DataType="BOOL" Value="0"/>
+<DataValueMember Name="UN" DataType="BOOL" Value="0"/>
+</Structure>
+</Element>
+</ArrayMember>
+<DataValueMember Name="AutoMode" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ManualMode" DataType="BOOL" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+</Tags>
+<Programs Use="Context">
+<Program Use="Context" Name="StationLogic" Class="Standard">
+<Routines Use="Context">
+<Routine Use="Target" Name="R1070_Pallet_UnLoading_Conveyor" Type="RLL">
+<RLLContent>
+<Rung Number="0" Type="N">
+<Text>
+<![CDATA[XIC(AlwaysOn)[XIC(Machine.AutoMode) OTE(PUC01.AutoMode) ,XIC(Machine.ManualMode) OTE(PUC01.ManualMode) ];]]>
+</Text>
+</Rung>
+<Rung Number="1" Type="N">
+<Comment>
+<![CDATA[Pending for Confirmation 
+Sequence Interlocks]]>
+</Comment>
+<Text>
+<![CDATA[XIO(Machine.Faulted)XIO(DI14)OTE(PUC01.Interlocks);]]>
+</Text>
+</Rung>
+<Rung Number="2" Type="N">
+<Comment>
+<![CDATA[Sequence Hold]]>
+</Comment>
+<Text>
+<![CDATA[[XIC(Machine.Hold) ,XIO(PUC01.Interlocks) ]XIC(PUC01.Active)XIO(PUC01.Continue)OTE(PUC01.Hold);]]>
+</Text>
+</Rung>
+<Rung Number="3" Type="N">
+<Text>
+<![CDATA[XIC(PUC01.Continue)OTU(PUC01.Continue);]]>
+</Text>
+</Rung>
+<Rung Number="4" Type="N">
+<Comment>
+<![CDATA[Auto Sequence Is Active.]]>
+</Comment>
+<Text>
+<![CDATA[XIC(PUC01.AutoMode)[NEQ(PUC01.Step,0) OTE(PUC01.Active) ,EQU(PUC01.Step,0) MOV(1,PUC01.Step) ];]]>
+</Text>
+</Rung>
+<Rung Number="5" Type="N">
+<Text>
+<![CDATA[XIC(PUC01.AutoMode)EQU(PUC01.Step,0)XIO(PUC01.Hold)[OTE(PUC01.Output[0].0) ,XIC(Pending) TON(PUC01.Timer[0],?,?) ,XIC(PUC01.Timer[0].DN) MOV(10,PUC01.Step) ];]]>
+</Text>
+</Rung>
+<Rung Number="6" Type="N">
+<Text>
+<![CDATA[XIC(PUC01.AutoMode)EQU(PUC01.Step,10)XIO(PUC01.Hold)[OTE(PUC01.Output[0].1) ,XIO(DI51) XIO(DI52) TON(PUC01.Timer[1],?,?) ,[XIC(DI51) XIC(DI52) ,XIC(DI51) ] TON(PUC01.Timer[20],?,?) ,XIC(PUC01.Timer[1].DN) MOV(20,PUC01.Step) ,XIC(PUC01.Timer[20].DN) MOV(50,PUC01.Step) ];]]>
+</Text>
+</Rung>
+<Rung Number="7" Type="N">
+<Text>
+<![CDATA[XIC(PUC01.AutoMode)EQU(PUC01.Step,20)XIO(PUC01.Hold)[OTE(PUC01.Output[0].2) ,XIC(BPLC01.Output[0].11) TON(PUC01.Timer[2],?,?) ,XIC(PUC01.Timer[2].DN) MOV(30,PUC01.Step) ];]]>
+</Text>
+</Rung>
+<Rung Number="8" Type="N">
+<Text>
+<![CDATA[XIC(PUC01.AutoMode)EQU(PUC01.Step,30)XIO(PUC01.Hold)[OTE(PUC01.Output[0].3) ,XIC(DI51) XIC(DI52) TON(PUC01.Timer[3],?,?) ,XIC(PUC01.Timer[3].DN) MOV(40,PUC01.Step) ];]]>
+</Text>
+</Rung>
+<Rung Number="9" Type="N">
+<Text>
+<![CDATA[XIC(PUC01.AutoMode)EQU(PUC01.Step,40)XIO(PUC01.Hold)[OTE(PUC01.Output[0].4) ,XIC(DI51) XIC(DI52) TON(PUC01.Timer[4],?,?) ,XIC(PUC01.Timer[4].DN) MOV(50,PUC01.Step) ];]]>
+</Text>
+</Rung>
+<Rung Number="10" Type="N">
+<Text>
+<![CDATA[XIC(PUC01.AutoMode)EQU(PUC01.Step,50)XIO(PUC01.Hold)[OTE(PUC01.Output[0].5) ,XIO(DI51) XIO(DI52) TON(PUC01.Timer[5],?,?) ,XIC(PUC01.Timer[5].DN) MOV(60,PUC01.Step) ];]]>
+</Text>
+</Rung>
+<Rung Number="11" Type="N">
+<Text>
+<![CDATA[XIC(PUC01.AutoMode)EQU(PUC01.Step,60)XIO(PUC01.Hold)[OTE(PUC01.Output[0].6) ,XIO(DI51) XIO(DI52) TON(PUC01.Timer[6],?,?) ,XIC(PUC01.Timer[6].DN) MOV(70,PUC01.Step) ];]]>
+</Text>
+</Rung>
+<Rung Number="12" Type="N">
+<Text>
+<![CDATA[XIC(PUC01.AutoMode)EQU(PUC01.Step,70)XIO(PUC01.Hold)[OTE(PUC01.Output[0].7) ,TON(PUC01.Timer[7],?,?) ,XIC(PUC01.Timer[7].DN) MOV(1,PUC01.Step) ];]]>
+</Text>
+</Rung>
+</RLLContent>
+</Routine>
+</Routines>
+</Program>
+</Programs>
+</Controller>
+</RSLogix5000Content>
